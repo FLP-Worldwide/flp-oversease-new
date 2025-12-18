@@ -20,7 +20,7 @@ export default function Hero({ t }) {
       setTimeout(() => {
         setActiveIndex((prev) => (prev + 1) % titles.length);
         setFade(true); // fade in
-      }, 500);
+      }, 100);
     }, 5000);
 
     return () => clearInterval(interval);
