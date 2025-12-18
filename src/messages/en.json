@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact",
+    "cta": "Book a Call"
+  },
+
+"hero": {
+  "title": "Choose now one of the best solutions for recruiting domestic and international workers",
+  "titleAlt": "Recruitment of domestic and international workers in all fields now in your fingertips",
+  "subtitle": "We are specialized in international recruitment. Join our team in Dubai, Europe, and beyond. A great opportunity to learn, grow, and advance your career.",
+  "primaryBtn": "Request a Call",
+  "secondaryBtn": "For Employers"
+},
+"about": {
+  "badge": "About Us",
+  "title": "Trusted International Recruitment Partner",
+  "subtitle": "We help companies hire reliable domestic and international workers while supporting candidates with transparent, legal, and ethical recruitment practices.",
+  "points": [
+    "Government compliant recruitment process",
+    "Skilled & verified workforce",
+    "End-to-end hiring support",
+    "Trusted by European employers"
+  ]
+}
+,
+  "stats": {
+    "govt": "Approved By Government Of India",
+    "license1": "Ministry Of Corporate Affairs (Lic: U78100DL2023PTC421528)",
+    "license2": "Ministry Of External Affairs (Lic: B-2268/DEL/COM/100/5/10739/2024)"
+  },
+
+  "services": {
+    "heading": "Explore Our Expert Services",
+    "subheading": "Comprehensive solutions for global workforce mobility.",
+    "list": [
+      {
+        "title": "Manpower Supply",
+        "desc": "Providing all solutions for overseas recruitment across various sectors."
+      },
+      {
+        "title": "Student Visa",
+        "desc": "Guidance and processing for students looking to study abroad."
+      },
+      {
+        "title": "Management Consultancy",
+        "desc": "Strategic advice to improve organizational performance and efficiency."
+      },
+      {
+        "title": "Recruitment Consultancy",
+        "desc": "End-to-end recruitment services for specialized industries."
+      }
+    ]
+  },
+
+  "industries": {
+    "list": [
+      { "title": "Medical & Health Care" },
+      { "title": "Logistic Industry" },
+      { "title": "Construction" },
+      { "title": "Oil & Gas" },
+      { "title": "Logistic Industry" },
+      { "title": "Construction" }
+    ]
+  },
+
+  "form": {
+    "heading": "Start Your Journey",
+    "subheading": "Whether you are hiring or looking for a job, we are here to help.",
+    "namePlaceholder": "Full Name",
+    "emailPlaceholder": "Email Address",
+    "phonePlaceholder": "Contact Number",
+    "fileLabel": "Upload CV / Requirement Doc",
+    "submitBtn": "Submit Application",
+    "tabCandidate": "I am a Candidate",
+    "tabEmployer": "I am an Employer",
+    "messagePlaceholder": "Tell us about your requirements..."
+  },
+
+"countries": [
+  "Germany",
+  "Spain",
+  "Poland",
+  "France",
+  "Italy",
+  "Netherlands",
+  "Belgium"
+]
+
+}
