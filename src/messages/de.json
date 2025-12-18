@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "contact": "Kontakt",
+    "cta": "Termin buchen"
+  },
+
+  "hero": {
+    "title": "Wählen Sie jetzt eine der besten Lösungen für die Rekrutierung von nationalen und internationalen Arbeitskräften",
+    "titleAlt": "Rekrutierung von nationalen und internationalen Arbeitskräften in allen Bereichen – jetzt in Ihrer Hand",
+    "subtitle": "Wir sind auf internationale Personalvermittlung spezialisiert. Werden Sie Teil unseres Teams in Dubai, Europa und darüber hinaus. Eine großartige Gelegenheit zu lernen, zu wachsen und Ihre Karriere voranzubringen.",
+    "primaryBtn": "Rückruf anfordern",
+    "secondaryBtn": "Für Arbeitgeber"
+  },
+
+  "about": {
+    "badge": "Über uns",
+    "title": "Vertrauenswürdiger internationaler Rekrutierungspartner",
+    "subtitle": "Wir unterstützen Unternehmen bei der Einstellung zuverlässiger nationaler und internationaler Arbeitskräfte und begleiten Kandidaten mit transparenten, legalen und ethischen Rekrutierungsprozessen.",
+    "points": [
+      "Regierungskonformer Rekrutierungsprozess",
+      "Qualifizierte und geprüfte Arbeitskräfte",
+      "End-to-End-Unterstützung im Einstellungsprozess",
+      "Vertrauen europäischer Arbeitgeber"
+    ]
+  },
+
+  "stats": {
+    "govt": "Genehmigt von der Regierung Indiens",
+    "license1": "Ministerium für Unternehmensangelegenheiten (Lizenz: U78100DL2023PTC421528)",
+    "license2": "Ministerium für Auswärtige Angelegenheiten (Lizenz: B-2268/DEL/COM/100/5/10739/2024)"
+  },
+
+  "services": {
+    "heading": "Entdecken Sie unsere professionellen Dienstleistungen",
+    "subheading": "Umfassende Lösungen für globale Arbeitskräftemobilität.",
+    "list": [
+      {
+        "title": "Personalbereitstellung",
+        "desc": "Bereitstellung umfassender Lösungen für die internationale Rekrutierung in verschiedenen Branchen."
+      },
+      {
+        "title": "Studentenvisum",
+        "desc": "Beratung und Abwicklung für Studierende, die im Ausland studieren möchten."
+      },
+      {
+        "title": "Managementberatung",
+        "desc": "Strategische Beratung zur Verbesserung der organisatorischen Leistung und Effizienz."
+      },
+      {
+        "title": "Personalberatung",
+        "desc": "Ganzheitliche Rekrutierungsdienstleistungen für spezialisierte Branchen."
+      }
+    ]
+  },
+
+  "industries": {
+    "list": [
+      { "title": "Medizin & Gesundheitswesen" },
+      { "title": "Logistikbranche" },
+      { "title": "Baugewerbe" },
+      { "title": "Öl & Gas" },
+      { "title": "Logistikbranche" },
+      { "title": "Baugewerbe" }
+    ]
+  },
+
+  "form": {
+    "heading": "Starten Sie Ihre Reise",
+    "subheading": "Ob Sie einstellen oder eine Arbeitsstelle suchen – wir sind für Sie da.",
+    "namePlaceholder": "Vollständiger Name",
+    "emailPlaceholder": "E-Mail-Adresse",
+    "phonePlaceholder": "Kontaktnummer",
+    "fileLabel": "Lebenslauf / Anforderungsdokument hochladen",
+    "submitBtn": "Bewerbung absenden",
+    "tabCandidate": "Ich bin Kandidat",
+    "tabEmployer": "Ich bin Arbeitgeber",
+    "messagePlaceholder": "Beschreiben Sie Ihre Anforderungen..."
+  },
+
+  "countries": [
+    "Deutschland",
+    "Spanien",
+    "Polen",
+    "Frankreich",
+    "Italien",
+    "Niederlande",
+    "Belgien"
+  ]
+}
