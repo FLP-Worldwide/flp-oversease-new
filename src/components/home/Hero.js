@@ -28,7 +28,7 @@ export default function Hero({ t }) {
   /* ------------------------------------------------------- */
 
   return (
-    <section id="home" className="relative pt-32 pb-20 px-6 overflow-hidden">
+    <section id="home" className="bg-white relative pt-32 pb-20 px-6 overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-50/50 -z-10 rounded-bl-[100px]" />
 
