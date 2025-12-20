@@ -49,7 +49,7 @@ export default function LicensesSection({ t }) {
               Ministry of Corporate Affairs
             </h3>
             <p className="text-sm text-gray-600">
-              CIN: U80100RJ2023PTC091520
+              Ministry Of Corporate Affairs (Lic - CIN: U80100RJ2023PTC091520 )
             </p>
             {/* <a
               href="/pdf/govt-approval.pdf"
@@ -68,7 +68,7 @@ export default function LicensesSection({ t }) {
               Ministry of External Affairs
             </h3>
             <p className="text-sm text-gray-600">
-              B-3084/RAJ/COM/100/5/11092/2025
+              Ministry Of External Affairs (Lic : B-3084/RAJ/COM/100/5/11092/2025 )
             </p>
             {/* <a
               href="/pdf/mea.pdf"
