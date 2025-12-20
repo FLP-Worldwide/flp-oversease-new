@@ -9,33 +9,28 @@ export default function Hero({ t }) {
   const [open, setOpen] = useState(false);
 
   /* ---------------- HERO TITLE FADE SLIDER ---------------- */
+
+
 const titles = [
   [
-    { text: 'Choose', highlight: false },
-    { text: 'now', highlight: false },
-    { text: 'one', highlight: false },
-    { text: 'of', highlight: false },
-    { text: 'the', highlight: false },
-    { text: 'best', highlight: false },
-    { text: 'solutions', highlight: false },
-    { text: 'for', highlight: false },
-    { text: 'recruiting', highlight: false },
-    { text: 'domestic', highlight: true },
+    { text: 'Reliable Workforce Recruitment for', highlight: false },
+    { text: 'German', highlight: false },
     { text: 'and', highlight: false },
-    { text: 'international', highlight: true },
-    { text: 'workers', highlight: false },
+    { text: 'European Employers', highlight: true },
+    { text: 'Skilled & Blue-Collar Talent', highlight: false },
+
   ],
-  [
-    { text: 'Recruitment', highlight: false },
-    { text: 'solutions', highlight: false },
-    { text: 'that', highlight: false },
-    { text: 'connect', highlight: false },
-    { text: 'global', highlight: true },
-    { text: 'talent', highlight: true },
-    { text: 'with', highlight: false },
-    { text: 'top', highlight: false },
-    { text: 'employers', highlight: false },
-  ],
+  // [
+  //   { text: 'Recruitment', highlight: false },
+  //   { text: 'solutions', highlight: false },
+  //   { text: 'that', highlight: false },
+  //   { text: 'connect', highlight: false },
+  //   { text: 'global', highlight: true },
+  //   { text: 'talent', highlight: true },
+  //   { text: 'with', highlight: false },
+  //   { text: 'top', highlight: false },
+  //   { text: 'employers', highlight: false },
+  // ],
 ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -74,7 +69,7 @@ const titles = [
 
           {/* HERO TITLE (FADE SLIDER) */}
          <h1
-            className={`min-h-[130px] text-5xl lg:text-5xl font-bold
+            className={`min-h-[130px] text-5xl lg:text-4xl font-bold
               text-blue-950 leading-[1.1]
               transition-opacity duration-500
               ${fade ? 'opacity-100' : 'opacity-0'}`}

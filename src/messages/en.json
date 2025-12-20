@@ -10,9 +10,9 @@
 "hero": {
   "title": "Choose now one of the best solutions for recruiting domestic and international workers",
   "titleAlt": "Recruitment of domestic and international workers in all fields now in your fingertips",
-  "subtitle": "We are specialized in international recruitment. Join our team in Dubai, Europe, and beyond. A great opportunity to learn, grow, and advance your career.",
-  "primaryBtn": "Request a Call",
-  "secondaryBtn": "For Employers"
+  "subtitle": "FLP Overseas delivers job-ready skilled and blue-collar talent for Germany, Europe, Japan, and the Gulf—trained to international standards and tailored to your workforce needs.",
+  "primaryBtn": "Partner with FLP Overseas",
+  "secondaryBtn": "Hire Manpower for Europe"
 },
 "about": {
   "badge": "About Us",
@@ -72,10 +72,10 @@
     "namePlaceholder": "Full Name",
     "emailPlaceholder": "Email Address",
     "phonePlaceholder": "Contact Number",
-    "fileLabel": "Upload CV / Requirement Doc",
-    "submitBtn": "Submit Application",
-    "tabCandidate": "I am a Candidate",
-    "tabEmployer": "I am an Employer",
+    "fileLabel": "Requirement Doc",
+    "submitBtn": "Call me Back",
+    "tabCandidate": "Hire Manpower for Europe",
+    "tabEmployer": "Request Workforce Proposal",
     "messagePlaceholder": "Tell us about your requirements..."
   },
 
