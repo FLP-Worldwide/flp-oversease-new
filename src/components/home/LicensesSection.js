@@ -32,6 +32,14 @@ export default function LicensesSection({ t }) {
               Recognized and approved by the Government of India to operate as
               an overseas recruitment agency.
             </p>
+            {/* <a
+              href="/pdf/govt-approval.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-6 text-sm font-semibold text-blue-600 hover:underline"
+            >
+              View License
+            </a> */}
           </div>
 
           {/* License 1 */}
@@ -41,8 +49,16 @@ export default function LicensesSection({ t }) {
               Ministry of Corporate Affairs
             </h3>
             <p className="text-sm text-gray-600">
-              {t.stats.license1}
+              CIN: U80100RJ2023PTC091520
             </p>
+            {/* <a
+              href="/pdf/govt-approval.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-6 text-sm font-semibold text-blue-600 hover:underline"
+            >
+              View License
+            </a> */}
           </div>
 
           {/* License 2 */}
@@ -52,8 +68,16 @@ export default function LicensesSection({ t }) {
               Ministry of External Affairs
             </h3>
             <p className="text-sm text-gray-600">
-              {t.stats.license2}
+              B-3084/RAJ/COM/100/5/11092/2025
             </p>
+            {/* <a
+              href="/pdf/mea.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-6 text-sm font-semibold text-blue-600 hover:underline"
+            >
+              View License
+            </a> */}
           </div>
 
         </div>
