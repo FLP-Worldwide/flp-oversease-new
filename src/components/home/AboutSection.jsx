@@ -19,17 +19,17 @@ export default function AboutSection({ t }) {
           </div>
 
           {/* Decorative */}
-          <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-emerald-400/20 rounded-full blur-3xl -z-10" />
+          <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-blue-400/20 rounded-full blur-3xl -z-10" />
         </div>
 
         {/* RIGHT → CONTENT */}
         <div className="space-y-6">
           <span className="inline-block px-4 py-2 text-xs font-bold uppercase tracking-wider
-            bg-emerald-100 text-emerald-700 rounded-full">
+            bg-blue-100 text-blue-700 rounded-full">
             {t.about.badge}
           </span>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-emerald-950 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-950 leading-tight">
             {t.about.title}
           </h2>
 
@@ -40,7 +40,7 @@ export default function AboutSection({ t }) {
           <ul className="space-y-4 pt-4">
             {t.about.points.map((point, i) => (
               <li key={i} className="flex items-start gap-3">
-                <CheckCircle size={20} className="text-emerald-500 mt-1" />
+                <CheckCircle size={20} className="text-blue-500 mt-1" />
                 <span className="text-gray-700">{point}</span>
               </li>
             ))}

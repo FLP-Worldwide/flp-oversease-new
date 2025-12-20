@@ -11,12 +11,12 @@ export default async function ContactPage({ params }) {
     <>
       <Header currentLang={locale} t={t} />
 
-      <section className="pt-32 pb-24 px-6 bg-gradient-to-b from-emerald-50 to-white">
+      <section className="pt-32 pb-24 px-6 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto">
 
           {/* Page Heading */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-emerald-950 mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-950 mb-4">
               Personal Inquiries
             </h1>
             <p className="text-gray-600 max-w-xl mx-auto">
@@ -30,7 +30,7 @@ export default async function ContactPage({ params }) {
 
             {/* LEFT → SIMPLE ENQUIRY FORM */}
             <div className="bg-white rounded-[32px] p-10 shadow-sm border border-gray-100">
-              <h2 className="text-2xl font-bold text-emerald-950 mb-6">
+              <h2 className="text-2xl font-bold text-blue-950 mb-6">
                 Send an Enquiry
               </h2>
 
@@ -43,7 +43,7 @@ export default async function ContactPage({ params }) {
                 </label>
                 <select
                   required
-                  className="w-full px-3 py-3 border border-gray-200 rounded-xl bg-white focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                  className="w-full px-3 py-3 border border-gray-200 rounded-xl bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
                 >
                   <option value="">Please select</option>
                   <option>Production & Logistics</option>
@@ -67,7 +67,7 @@ export default async function ContactPage({ params }) {
                 <input
                   type="text"
                   placeholder="e.g. welder, electrician"
-                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
                 />
               </div>
 
@@ -79,7 +79,7 @@ export default async function ContactPage({ params }) {
                 <input
                   type="text"
                   required
-                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
                 />
               </div>
 
@@ -91,7 +91,7 @@ export default async function ContactPage({ params }) {
                 <input
                   type="text"
                   required
-                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
                 />
               </div>
 
@@ -104,7 +104,7 @@ export default async function ContactPage({ params }) {
                   type="tel"
                   placeholder="e.g. +49 172 7477707"
                   required
-                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
                 />
               </div>
 
@@ -116,7 +116,7 @@ export default async function ContactPage({ params }) {
                 <input
                   type="email"
                   required
-                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
                 />
               </div>
 
@@ -129,14 +129,14 @@ export default async function ContactPage({ params }) {
                   rows={4}
                   placeholder="e.g. start date, number of employees, type of contract, location"
                   required
-                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 resize-none"
+                  className="w-full px-3 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 resize-none"
                 />
               </div>
 
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full py-4 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-400 transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/30"
+                className="w-full py-4 bg-blue-500 text-white font-bold rounded-xl hover:bg-blue-400 transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-500/30"
               >
                 Sending
                 <Send size={18} />
@@ -148,14 +148,14 @@ export default async function ContactPage({ params }) {
             {/* RIGHT → CONTACT DETAILS */}
             <div className="space-y-10">
 
-              <div className="bg-emerald-950 rounded-[32px] p-10 text-white shadow-2xl">
+              <div className="bg-blue-950 rounded-[32px] p-10 text-white shadow-2xl">
                 <h2 className="text-2xl font-bold mb-8">
                   Contact Details
                 </h2>
 
-                <div className="space-y-6 text-emerald-100">
+                <div className="space-y-6 text-blue-100">
                   <div className="flex items-start gap-4">
-                    <Mail className="text-emerald-400 mt-1" />
+                    <Mail className="text-blue-400 mt-1" />
                     <div>
                       <p className="font-semibold text-white">Email</p>
                       <p>info@selectraoverseas.com</p>
@@ -163,7 +163,7 @@ export default async function ContactPage({ params }) {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <Phone className="text-emerald-400 mt-1" />
+                    <Phone className="text-blue-400 mt-1" />
                     <div>
                       <p className="font-semibold text-white">Phone</p>
                       <p>+91 98718 04422</p>
@@ -171,7 +171,7 @@ export default async function ContactPage({ params }) {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <MapPin className="text-emerald-400 mt-1" />
+                    <MapPin className="text-blue-400 mt-1" />
                     <div>
                       <p className="font-semibold text-white">Office Address</p>
                       <p className="leading-relaxed">

@@ -27,7 +27,7 @@ export default function EnquiryModal({ open, onClose }) {
         </button>
 
         {/* Heading */}
-        <h2 className="text-2xl font-bold text-emerald-950 mb-2">
+        <h2 className="text-2xl font-bold text-blue-950 mb-2">
           Send an Enquiry
         </h2>
         <p className="text-gray-500 mb-6">
@@ -42,13 +42,13 @@ export default function EnquiryModal({ open, onClose }) {
                 <input
                 type="text"
                 placeholder="First Name"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-emerald-500 focus:outline-none"
+                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
                 required
                 />
                 <input
                 type="text"
                 placeholder="Last Name"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-emerald-500 focus:outline-none"
+                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
                 required
                 />
             </div>
@@ -58,13 +58,13 @@ export default function EnquiryModal({ open, onClose }) {
                 <input
                 type="email"
                 placeholder="Email"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-emerald-500 focus:outline-none"
+                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
                 required
                 />
                 <input
                 type="text"
                 placeholder="Enter Industry"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-emerald-500 focus:outline-none"
+                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
                 required
                 />
             </div>
@@ -74,12 +74,12 @@ export default function EnquiryModal({ open, onClose }) {
                 <input
                 type="text"
                 placeholder="Your Company Name"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-emerald-500 focus:outline-none"
+                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
                 />
                 <input
                 type="text"
                 placeholder="Your Designation"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-emerald-500 focus:outline-none"
+                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
                 />
             </div>
 
@@ -88,13 +88,13 @@ export default function EnquiryModal({ open, onClose }) {
                 <input
                 type="tel"
                 placeholder="Cell Phone No"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-emerald-500 focus:outline-none"
+                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
                 required
                 />
                 <input
                 type="url"
                 placeholder="Company Website"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-emerald-500 focus:outline-none"
+                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
                 />
             </div>
 
@@ -102,14 +102,14 @@ export default function EnquiryModal({ open, onClose }) {
             <textarea
                 rows={3}
                 placeholder="Tell Us Your Requirements"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-emerald-500 focus:outline-none resize-none"
+                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none resize-none"
                 required
             />
 
             {/* Submit */}
             <button
                 type="submit"
-                className="w-full mt-6 py-3 bg-emerald-500 text-white font-bold rounded-xl hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/30"
+                className="w-full mt-6 py-3 bg-blue-500 text-white font-bold rounded-xl hover:bg-blue-400 transition-all shadow-lg shadow-blue-500/30"
             >
                 Send Enquiry
             </button>

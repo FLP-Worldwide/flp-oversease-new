@@ -6,6 +6,7 @@ import ContactForm from '@/components/home/ContactForm';
 import Footer from '@/components/layout/Footer';
 import LicensesSection from '@/components/home/LicensesSection';
 import AboutSection from '@/components/home/AboutSection';
+import FaqSection from '@/components/layout/FaqSection';
 
 export default async function Page({ params }) {
   const { locale } = await params;
@@ -20,7 +21,7 @@ export default async function Page({ params }) {
       <AboutSection t={t} />
       <Features t={t} />
       <ContactForm t={t} />
-
+      <FaqSection />
       <Footer t={t} />
     </>
   );

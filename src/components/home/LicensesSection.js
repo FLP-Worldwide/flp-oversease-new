@@ -10,7 +10,7 @@ export default function LicensesSection({ t }) {
 
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-emerald-950 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">
             Government Approved & Licensed
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -23,9 +23,9 @@ export default function LicensesSection({ t }) {
         <div className="grid md:grid-cols-3 gap-8">
 
           {/* Govt Approved */}
-          <div className="p-8 rounded-[32px] border border-gray-100 shadow-sm hover:shadow-lg transition-all bg-emerald-50/40">
-            <ShieldCheck className="text-emerald-500 mb-4" size={36} />
-            <h3 className="text-lg font-bold text-emerald-950 mb-2">
+          <div className="p-8 rounded-[32px] border border-gray-100 shadow-sm hover:shadow-lg transition-all bg-blue-50/40">
+            <ShieldCheck className="text-blue-500 mb-4" size={36} />
+            <h3 className="text-lg font-bold text-blue-950 mb-2">
               {t.stats.govt}
             </h3>
             <p className="text-sm text-gray-600 leading-relaxed">
@@ -36,8 +36,8 @@ export default function LicensesSection({ t }) {
 
           {/* License 1 */}
           <div className="p-8 rounded-[32px] border border-gray-100 shadow-sm hover:shadow-lg transition-all bg-white">
-            <BadgeCheck className="text-emerald-500 mb-4" size={36} />
-            <h3 className="text-lg font-bold text-emerald-950 mb-2">
+            <BadgeCheck className="text-blue-500 mb-4" size={36} />
+            <h3 className="text-lg font-bold text-blue-950 mb-2">
               Ministry of Corporate Affairs
             </h3>
             <p className="text-sm text-gray-600">
@@ -47,8 +47,8 @@ export default function LicensesSection({ t }) {
 
           {/* License 2 */}
           <div className="p-8 rounded-[32px] border border-gray-100 shadow-sm hover:shadow-lg transition-all bg-white">
-            <FileCheck className="text-emerald-500 mb-4" size={36} />
-            <h3 className="text-lg font-bold text-emerald-950 mb-2">
+            <FileCheck className="text-blue-500 mb-4" size={36} />
+            <h3 className="text-lg font-bold text-blue-950 mb-2">
               Ministry of External Affairs
             </h3>
             <p className="text-sm text-gray-600">

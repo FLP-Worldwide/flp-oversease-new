@@ -48,10 +48,10 @@ const COUNTRY_FLAGS = ['🇩🇪', '🇪🇸', '🇵🇱', '🇫🇷', '🇮🇹
       {/* Services Section */}
       <section id="services" className="pt-24 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-emerald-500 font-semibold tracking-wider uppercase text-sm mb-3">
+          <h2 className="text-blue-500 font-semibold tracking-wider uppercase text-sm mb-3">
             What We Offer
           </h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-emerald-950">
+          <h3 className="text-3xl md:text-5xl font-bold text-blue-950">
             {t.services.heading}
           </h3>
         </div>
@@ -62,17 +62,17 @@ const COUNTRY_FLAGS = ['🇩🇪', '🇪🇸', '🇵🇱', '🇫🇷', '🇮🇹
             return (
               <div
                 key={index}
-                className="p-8 rounded-3xl bg-gray-50 hover:bg-emerald-950 group transition-all duration-300 border border-gray-100 hover:shadow-2xl"
+                className="p-8 rounded-3xl bg-gray-50 hover:bg-blue-950 group transition-all duration-300 border border-gray-100 hover:shadow-2xl"
               >
-                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 text-emerald-600 shadow-sm group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 text-blue-600 shadow-sm group-hover:bg-blue-500 group-hover:text-white transition-colors">
                   <Icon size={28} />
                 </div>
 
-                <h4 className="text-xl font-bold text-emerald-950 group-hover:text-white mb-3">
+                <h4 className="text-xl font-bold text-blue-950 group-hover:text-white mb-3">
                   {service.title}
                 </h4>
 
-                <p className="text-gray-500 group-hover:text-emerald-100/80 leading-relaxed text-sm">
+                <p className="text-gray-500 group-hover:text-blue-100/80 leading-relaxed text-sm">
                   {service.desc}
                 </p>
               </div>
@@ -85,7 +85,7 @@ const COUNTRY_FLAGS = ['🇩🇪', '🇪🇸', '🇵🇱', '🇫🇷', '🇮🇹
       <section className="pt-24 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-emerald-950 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-950 mb-4">
               Industries We Serve
             </h2>
             <p className="text-gray-500">
@@ -95,7 +95,7 @@ const COUNTRY_FLAGS = ['🇩🇪', '🇪🇸', '🇵🇱', '🇫🇷', '🇮🇹
 
           <a
             href="#contact"
-            className="text-emerald-600 font-bold hover:text-emerald-800 flex items-center gap-2"
+            className="text-blue-600 font-bold hover:text-blue-800 flex items-center gap-2"
           >
             View All Industries <span className="text-lg">→</span>
           </a>
@@ -135,7 +135,7 @@ const COUNTRY_FLAGS = ['🇩🇪', '🇪🇸', '🇵🇱', '🇫🇷', '🇮🇹
 
       {/* Global Reach */}
       <section className="pt-24 px-6 max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-emerald-950 mb-12">
+        <h2 className="text-3xl font-bold text-blue-950 mb-12">
           We Specialize in International Recruitment
         </h2>
 

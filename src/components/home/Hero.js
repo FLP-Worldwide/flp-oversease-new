@@ -9,7 +9,35 @@ export default function Hero({ t }) {
   const [open, setOpen] = useState(false);
 
   /* ---------------- HERO TITLE FADE SLIDER ---------------- */
-  const titles = [t.hero.title, t.hero.titleAlt];
+const titles = [
+  [
+    { text: 'Choose', highlight: false },
+    { text: 'now', highlight: false },
+    { text: 'one', highlight: false },
+    { text: 'of', highlight: false },
+    { text: 'the', highlight: false },
+    { text: 'best', highlight: false },
+    { text: 'solutions', highlight: false },
+    { text: 'for', highlight: false },
+    { text: 'recruiting', highlight: false },
+    { text: 'domestic', highlight: true },
+    { text: 'and', highlight: false },
+    { text: 'international', highlight: true },
+    { text: 'workers', highlight: false },
+  ],
+  [
+    { text: 'Recruitment', highlight: false },
+    { text: 'solutions', highlight: false },
+    { text: 'that', highlight: false },
+    { text: 'connect', highlight: false },
+    { text: 'global', highlight: true },
+    { text: 'talent', highlight: true },
+    { text: 'with', highlight: false },
+    { text: 'top', highlight: false },
+    { text: 'employers', highlight: false },
+  ],
+];
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
@@ -30,34 +58,37 @@ export default function Hero({ t }) {
   return (
     <section id="home" className="bg-white relative pt-32 pb-20 px-6 overflow-hidden">
       {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-50/50 -z-10 rounded-bl-[100px]" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/50 -z-10 rounded-bl-[100px]" />
 
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
         
         {/* LEFT CONTENT */}
         <div className="space-y-6">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100/50 rounded-full border border-emerald-200">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-emerald-800 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100/50 rounded-full border border-blue-200">
+            <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
+            <span className="text-blue-800 text-xs font-bold uppercase tracking-wider">
               Hiring Now For Dubai & Europe
             </span>
           </div>
 
           {/* HERO TITLE (FADE SLIDER) */}
-          <h1
-            className={`min-h-[130px] text-5xl lg:text-5xl font-bold text-emerald-950
-              leading-[1.1] transition-opacity duration-500
+         <h1
+            className={`min-h-[130px] text-5xl lg:text-5xl font-bold
+              text-blue-950 leading-[1.1]
+              transition-opacity duration-500
               ${fade ? 'opacity-100' : 'opacity-0'}`}
           >
-            {titles[activeIndex]
-              .split(' ')
-              .map((word, i) => (
-                <span key={i} className={i === 2 ? 'text-emerald-500' : ''}>
-                  {word}{' '}
-                </span>
-              ))}
+            {titles[activeIndex].map((word, i) => (
+              <span
+                key={i}
+                className={word.highlight ? 'text-blue-500' : ''}
+              >
+                {word.text}{' '}
+              </span>
+            ))}
           </h1>
+
 
           {/* SUBTITLE */}
           <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
@@ -68,10 +99,10 @@ export default function Hero({ t }) {
           <div className="flex flex-wrap gap-4">
             <button
               onClick={() => setOpen(true)}
-              className="px-8 py-4 bg-emerald-950 text-white font-semibold
-              rounded-full hover:bg-emerald-900 transition-all
+              className="px-8 py-4 bg-blue-950 text-white font-semibold
+              rounded-full hover:bg-blue-900 transition-all
               flex items-center gap-2 group
-              shadow-lg shadow-emerald-900/20"
+              shadow-lg shadow-blue-900/20"
             >
               {t.hero.primaryBtn}
               <ArrowRight
@@ -95,7 +126,7 @@ export default function Hero({ t }) {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/80 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-transparent to-transparent" />
 
             {/* Floating Card */}
             <div className="absolute bottom-8 left-8 right-8 p-6
@@ -105,18 +136,18 @@ export default function Hero({ t }) {
                 <span className="text-sm font-medium opacity-90">
                   Overseas Recruitment
                 </span>
-                <span className="text-emerald-400 font-bold">
+                <span className="text-blue-400 font-bold">
                   98% Success
                 </span>
               </div>
               <div className="w-full h-1.5 bg-white/20 rounded-full overflow-hidden">
-                <div className="h-full w-[98%] bg-emerald-400 rounded-full" />
+                <div className="h-full w-[98%] bg-blue-400 rounded-full" />
               </div>
             </div>
           </div>
 
           {/* Decorative Elements */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 bg-emerald-400/20 rounded-full blur-3xl -z-10" />
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-400/20 rounded-full blur-3xl -z-10" />
           <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-yellow-400/20 rounded-full blur-3xl -z-10" />
         </div>
       </div>
