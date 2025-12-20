@@ -97,13 +97,13 @@ export default function ContactForm({ t }) {
         </div>
 
         {/* Right Form */}
-        <div className="bg-white p-8 md:p-10 rounded-[40px] shadow-2xl">
+        <div className="bg-white p-4 md:p-10 rounded-[40px] shadow-2xl">
           {/* Tabs */}
           <div className="flex p-1 bg-gray-100 rounded-full mb-8">
             <button
               type="button"
               onClick={() => setUserType('candidate')}
-              className={`flex-1 py-3 text-sm font-bold rounded-full transition-all ${
+              className={`flex-1 py-3 text-xs font-bold rounded-full transition-all ${
                 userType === 'candidate'
                   ? 'bg-blue-950 text-white shadow-md'
                   : 'text-gray-500 hover:text-blue-900'
@@ -115,7 +115,7 @@ export default function ContactForm({ t }) {
             <button
               type="button"
               onClick={() => setUserType('employer')}
-              className={`flex-1 py-3 text-sm font-bold rounded-full transition-all ${
+              className={`flex-1 py-3 text-xs font-bold rounded-full transition-all ${
                 userType === 'employer'
                   ? 'bg-blue-950 text-white shadow-md'
                   : 'text-gray-500 hover:text-blue-900'
