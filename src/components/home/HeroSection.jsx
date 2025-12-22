@@ -1,16 +1,19 @@
-import React from 'react'
+"use client";
+import React, {useState} from 'react'
+import EnquiryModal from '../ui/EnquiryModal'
 
 export default function HeroSection() {
+    const [open, setOpen] = useState(false);
   return (
 
-    
+    <>
     <section
   id="home"
   className="relative w-full min-h-[90vh]"
 >
         {/* Background Image */}
         <img
-          src="https://as2.ftcdn.net/jpg/05/15/52/33/1000_F_515523379_CndzPD31zPM38z2I0H3daEnJwkHINPgr.jpg"
+          src="https://images.unsplash.com/photo-1759763823587-c8bd07fca246?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Global Workforce Recruitment"
           className="absolute inset-0 w-full min-h-[90vh] object-cover"
         />
@@ -53,7 +56,7 @@ export default function HeroSection() {
 
               {/* CTA */}
               <div className="flex gap-4">
-                <button className="px-8 py-4 bg-blue-500 text-white
+                <button  onClick={() => setOpen(true)} className="px-8 py-4 bg-blue-500 text-white
                   font-semibold rounded-full hover:bg-blue-400 transition">
                     Request a Callback
                 </button>
@@ -79,5 +82,8 @@ export default function HeroSection() {
           </div>
         </div>
       </section>
+
+ <EnquiryModal open={open} onClose={() => setOpen(false)} />
+</>
   )
 }

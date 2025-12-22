@@ -8,6 +8,7 @@ import LicensesSection from '@/components/home/LicensesSection';
 import AboutSection from '@/components/home/AboutSection';
 import FaqSection from '@/components/layout/FaqSection';
 import HeroSection from '@/components/home/HeroSection';
+import ResumeBuilderSection from '@/components/home/ResumeBuilderSection';
 
 export default async function Page({ params }) {
   const { locale } = await params;
@@ -26,9 +27,12 @@ export default async function Page({ params }) {
       <LicensesSection t={t} />
       <AboutSection t={t} />
       <Features t={t} />
+      <ResumeBuilderSection />
       <ContactForm t={t} />
       <FaqSection />
       <Footer t={t} />
+
+      
     </>
   );
 }
