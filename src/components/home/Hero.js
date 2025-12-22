@@ -63,7 +63,7 @@ const titles = [
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100/50 rounded-full border border-blue-200">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
             <span className="text-blue-800 text-xs font-bold uppercase tracking-wider">
-              Hiring Now For Dubai & Europe
+              Hiring Now For Germany & European Employers
             </span>
           </div>
 
@@ -115,7 +115,7 @@ const titles = [
         <div className="relative">
           <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative z-10">
             <img
-              src="https://images.unsplash.com/photo-1549637642-90187f64f420?auto=format&fit=crop&q=80&w=1200"
+              src="https://thermalprocessing.com/wp-content/uploads/2021/11/TP-2021-12-Feat-3-women.jpg"
               alt="Industrial Worker"
               className="w-full h-full object-cover"
             />

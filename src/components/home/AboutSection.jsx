@@ -12,7 +12,7 @@ export default function AboutSection({ t }) {
         <div className="relative">
           <div className="rounded-[36px] overflow-hidden shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=1200"
+              src="https://guidable-jobs.s3.amazonaws.com/uploads/article_images/factoryjobs01.webp"
               alt="International Recruitment Team"
               className="w-full h-full object-cover"
             />

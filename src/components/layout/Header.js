@@ -34,7 +34,7 @@ export default function Header({ currentLang, t }) {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50">
+    <nav className="bg-white fixed top-0 left-0 w-full z-50 ">
 
       {/* Announcement */}
       <AnnouncementBar isScrolled={isScrolled} />
