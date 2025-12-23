@@ -83,7 +83,11 @@ export default function HeroSection() {
         </div>
       </section>
 
- <EnquiryModal open={open} onClose={() => setOpen(false)} />
+ <EnquiryModal
+  open={open}
+  onClose={() => setOpen(false)}
+  source="callback"
+/>
 </>
   )
 }

@@ -1,10 +1,52 @@
 'use client';
 
-import { X, Send } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useState } from 'react';
 
-export default function EnquiryModal({ open, onClose }) {
+export default function EnquiryModal({ open, onClose, source }) {
   if (!open) return null;
+
+  const [form, setForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    industry: '',
+    companyName: '',
+    designation: '',
+    phone: '',
+    website: '',
+    message: '',
+  });
+
+  const [loading, setLoading] = useState(false);
+
+ const handleChange = (e) => {
+  const { name, value } = e.target;
+  setForm((prev) => ({ ...prev, [name]: value }));
+};
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...form,
+          source, // 🔥 THIS IS THE ONLY ADDITION
+        }),
+      });
+
+      onClose(); // same UX
+    } catch (err) {
+      console.error('Lead submit failed', err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center">
@@ -34,87 +76,57 @@ export default function EnquiryModal({ open, onClose }) {
           Fill in the details and our team will contact you shortly.
         </p>
 
-        {/* Form */}
-        <form className="space-y-5">
+        {/* 🔒 UI UNCHANGED */}
+        <form className="space-y-5" onSubmit={handleSubmit}>
 
-            {/* Name */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                type="text"
-                placeholder="First Name"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
-                required
-                />
-                <input
-                type="text"
-                placeholder="Last Name"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
-                required
-                />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input placeholder="First Name" required name="firstName"
+              className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
+              onChange={handleChange} />
+            <input placeholder="Last Name" required name="lastName"
+              className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
+              onChange={handleChange} />
+          </div>
 
-            {/* Email */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                type="email"
-                placeholder="Email"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
-                required
-                />
-                <input
-                type="text"
-                placeholder="Enter Industry"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
-                required
-                />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input placeholder="Email" type="email" required  name="email"
+              className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
+              onChange={handleChange} />
+            <input placeholder="Enter Industry" required name="industry"
+              className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
+              onChange={handleChange} />
+          </div>
 
-            {/* Company */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                type="text"
-                placeholder="Your Company Name"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
-                />
-                <input
-                type="text"
-                placeholder="Your Designation"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
-                />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input placeholder="Your Company Name" name="companyName"
+              className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
+              onChange={handleChange} />
+            <input placeholder="Your Designation" name="designation"
+              className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
+              onChange={handleChange} />
+          </div>
 
-            {/* Contact */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input
-                type="tel"
-                placeholder="Cell Phone No"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
-                required
-                />
-                <input
-                type="url"
-                placeholder="Company Website"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
-                />
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input placeholder="Cell Phone No" required name="phone"
+              className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
+              onChange={handleChange} />
+            <input placeholder="Company Website" name="website"
+              className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none"
+              onChange={handleChange} />
+          </div>
 
-            {/* Requirements */}
-            <textarea
-                rows={3}
-                placeholder="Tell Us Your Requirements"
-                className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none resize-none"
-                required
-            />
+          <textarea rows={3} placeholder="Tell Us Your Requirements" required name="message"
+            className="w-full px-4 py-3 border-b border-gray-300 focus:border-blue-500 focus:outline-none resize-none"
+            onChange={handleChange} />
 
-            {/* Submit */}
-            <button
-                type="submit"
-                className="w-full mt-6 py-3 bg-blue-500 text-white font-bold rounded-xl hover:bg-blue-400 transition-all shadow-lg shadow-blue-500/30"
-            >
-                Send Enquiry
-            </button>
-            </form>
-
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full mt-6 py-3 bg-blue-500 text-white font-bold rounded-xl hover:bg-blue-400 transition-all shadow-lg shadow-blue-500/30"
+          >
+            {loading ? 'Sending...' : 'Send Enquiry'}
+          </button>
+        </form>
       </div>
     </div>
   );

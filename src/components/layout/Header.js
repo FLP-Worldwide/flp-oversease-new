@@ -62,10 +62,10 @@ export default function Header({ currentLang, t }) {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             <NavLink href={`/${locale}/`} isScrolled={isScrolled}>{t.nav.home}</NavLink>
-            <a className={`hover:text-blue-400 ${isScrolled ? 'text-gray-200' : 'text-blue-900'}`} href="#about">
+            <a className={`hover:text-blue-400 ${isScrolled ? 'text-gray-200' : 'text-blue-900'}`}  href={`/${locale}#about`}>
               {t.nav.about}
             </a>
-            <a className={`hover:text-blue-400 ${isScrolled ? 'text-gray-200' : 'text-blue-900'}`} href="#services">
+            <a className={`hover:text-blue-400 ${isScrolled ? 'text-gray-200' : 'text-blue-900'}`} href={`/${locale}#services`}>
               {t.nav.services}
             </a>
             <NavLink href={`/${locale}/contact`} isScrolled={isScrolled}>{t.nav.contact}</NavLink>

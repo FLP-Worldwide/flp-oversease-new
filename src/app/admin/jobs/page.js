@@ -1,34 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
-
-/* ---------------- MOCK DATA ---------------- */
-
-const initialJobs = [
-  {
-    id: 1,
-    title: "Electrician",
-    country: "Germany",
-    type: "Full Time",
-    salary: "€2,500 / month",
-    skills: "Wiring, Maintenance",
-    status: "Active",
-    createdAt: "2025-12-10",
-  },
-  {
-    id: 2,
-    title: "Welder",
-    country: "Poland",
-    type: "Part Time",
-    salary: "€18 / hour",
-    skills: "Arc Welding",
-    status: "Inactive",
-    createdAt: "2025-12-08",
-  },
-];
+import React, { useEffect, useState } from "react";
 
 export default function JobsPage() {
-  const [jobs, setJobs] = useState(initialJobs);
+  const [jobs, setJobs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   const [showModal, setShowModal] = useState(false);
   const [editing, setEditing] = useState(null);
 
@@ -41,6 +18,27 @@ export default function JobsPage() {
     description: "",
     status: "Active",
   });
+
+  /* ---------------- FETCH JOBS ---------------- */
+
+  const fetchJobs = async () => {
+    try {
+      setLoading(true);
+      const res = await fetch("/api/jobs");
+      const data = await res.json();
+      setJobs(data.jobs || []);
+    } catch (err) {
+      console.error("Failed to fetch jobs", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchJobs();
+  }, []);
+
+  /* ---------------- HELPERS ---------------- */
 
   const resetForm = () => {
     setForm({
@@ -62,39 +60,87 @@ export default function JobsPage() {
 
   const handleEdit = (job) => {
     setEditing(job);
-    setForm(job);
+    setForm({
+      title: job.title,
+      country: job.country,
+      type: job.jobType === "part-time" ? "Part Time" : "Full Time",
+      salary: job.salary || "",
+      skills: job.skills?.join(", ") || "",
+      description: job.description || "",
+      status: job.status === "closed" ? "Inactive" : "Active",
+    });
     setShowModal(true);
   };
 
-  const handleSave = () => {
+  /* ---------------- SAVE (CREATE / UPDATE) ---------------- */
+
+  const handleSave = async () => {
     if (!form.title || !form.country) {
       alert("Job title and country are required");
       return;
     }
 
-    if (editing) {
-      setJobs((prev) =>
-        prev.map((j) => (j.id === editing.id ? { ...editing, ...form } : j))
-      );
-    } else {
-      setJobs((prev) => [
-        {
-          id: Date.now(),
-          ...form,
-          createdAt: new Date().toISOString().slice(0, 10),
-        },
-        ...prev,
-      ]);
+    const payload = {
+      title: form.title,
+      country: form.country,
+      salary: form.salary,
+      jobType: form.type === "Part Time" ? "part-time" : "full-time",
+      skills: form.skills.split(",").map((s) => s.trim()).filter(Boolean),
+      description: form.description,
+      status: form.status === "Active" ? "active" : "closed",
+    };
+
+    try {
+      if (editing) {
+        await fetch("/api/jobs", {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ id: editing._id, ...payload }),
+        });
+      } else {
+        await fetch("/api/jobs", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      }
+
+      setShowModal(false);
+      resetForm();
+      fetchJobs();
+    } catch (err) {
+      console.error("Save failed", err);
     }
-
-    setShowModal(false);
-    resetForm();
   };
 
-  const handleDelete = (id) => {
-    if (!confirm("Delete job post?")) return;
-    setJobs((prev) => prev.filter((j) => j.id !== id));
-  };
+  /* ---------------- DELETE ---------------- */
+
+const handleDelete = async (id) => {
+  const confirmDelete = confirm("Are you sure you want to delete this job?");
+  if (!confirmDelete) return;
+
+  try {
+    const res = await fetch("/api/jobs", {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id }),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      // remove from UI instantly
+      setJobs((prev) => prev.filter((job) => job._id !== id));
+    } else {
+      alert(data.message);
+    }
+  } catch (err) {
+    console.error("Failed to delete job", err);
+  }
+};
+
 
   return (
     <div className="space-y-4">
@@ -120,7 +166,9 @@ export default function JobsPage() {
       <div className="bg-white rounded-xl p-4 shadow-xs border border-gray-200">
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-base font-semibold">Job Posts</h3>
-          <div className="text-sm text-gray-500">{jobs.length} total</div>
+          <div className="text-sm text-gray-500">
+            {loading ? "Loading..." : `${jobs.length} total`}
+          </div>
         </div>
 
         <div className="overflow-x-auto rounded-md">
@@ -138,20 +186,22 @@ export default function JobsPage() {
 
             <tbody className="divide-y divide-gray-200">
               {jobs.map((job) => (
-                <tr key={job.id}>
+                <tr key={job._id}>
                   <td className="py-2 px-4 text-sm font-medium">{job.title}</td>
                   <td className="py-2 px-4 text-sm">{job.country}</td>
-                  <td className="py-2 px-4 text-sm">{job.type}</td>
-                  <td className="py-2 px-4 text-sm">{job.salary}</td>
+                  <td className="py-2 px-4 text-sm">
+                    {job.jobType === "part-time" ? "Part Time" : "Full Time"}
+                  </td>
+                  <td className="py-2 px-4 text-sm">{job.salary || "—"}</td>
                   <td className="py-2 px-4 text-sm">
                     <span
                       className={`px-2 py-1 rounded text-xs font-medium ${
-                        job.status === "Active"
+                        job.status === "active"
                           ? "bg-emerald-50 text-emerald-700"
                           : "bg-gray-100 text-gray-600"
                       }`}
                     >
-                      {job.status}
+                      {job.status === "active" ? "Active" : "Inactive"}
                     </span>
                   </td>
                   <td className="py-2 px-4 text-sm">
@@ -163,7 +213,7 @@ export default function JobsPage() {
                         Edit
                       </button>
                       <button
-                        onClick={() => handleDelete(job.id)}
+                       onClick={() => handleDelete(job._id)}
                         className="px-3 py-1 rounded-md border border-red-200 text-sm text-red-600 hover:bg-red-50"
                       >
                         Delete
@@ -172,12 +222,19 @@ export default function JobsPage() {
                   </td>
                 </tr>
               ))}
+              {!loading && jobs.length === 0 && (
+                <tr>
+                  <td colSpan="6" className="py-6 text-center text-sm text-gray-500">
+                    No jobs found
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>
       </div>
 
-      {/* CREATE / EDIT MODAL */}
+      {/* MODAL (UNCHANGED UI) */}
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
           <div className="absolute inset-0 bg-black/30" onClick={() => setShowModal(false)} />
@@ -189,70 +246,28 @@ export default function JobsPage() {
 
             <div className="space-y-3">
 
-              <Input
-                label="Job Title"
-                value={form.title}
-                onChange={(v) => setForm({ ...form, title: v })}
-              />
-
-              <Input
-                label="Country"
-                value={form.country}
-                onChange={(v) => setForm({ ...form, country: v })}
-              />
+              <Input label="Job Title" value={form.title} onChange={(v) => setForm({ ...form, title: v })} />
+              <Input label="Country" value={form.country} onChange={(v) => setForm({ ...form, country: v })} />
 
               <div className="grid grid-cols-2 gap-3">
-                <Select
-                  label="Job Type"
-                  value={form.type}
-                  options={["Full Time", "Part Time"]}
-                  onChange={(v) => setForm({ ...form, type: v })}
-                />
-
-                <Select
-                  label="Status"
-                  value={form.status}
-                  options={["Active", "Inactive"]}
-                  onChange={(v) => setForm({ ...form, status: v })}
-                />
+                <Select label="Job Type" value={form.type} options={["Full Time", "Part Time"]} onChange={(v) => setForm({ ...form, type: v })} />
+                <Select label="Status" value={form.status} options={["Active", "Inactive"]} onChange={(v) => setForm({ ...form, status: v })} />
               </div>
 
-              <Input
-                label="Salary"
-                value={form.salary}
-                onChange={(v) => setForm({ ...form, salary: v })}
-                placeholder="€2,500 / month"
-              />
-
-              <Input
-                label="Required Skills"
-                value={form.skills}
-                onChange={(v) => setForm({ ...form, skills: v })}
-                placeholder="Comma separated"
-              />
-
-              <Textarea
-                label="Job Description"
-                value={form.description}
-                onChange={(v) => setForm({ ...form, description: v })}
-              />
+              <Input label="Salary" value={form.salary} onChange={(v) => setForm({ ...form, salary: v })} />
+              <Input label="Required Skills" value={form.skills} onChange={(v) => setForm({ ...form, skills: v })} />
+              <Textarea label="Job Description" value={form.description} onChange={(v) => setForm({ ...form, description: v })} />
 
               <div className="flex justify-end gap-2 pt-3">
-                <button
-                  onClick={() => setShowModal(false)}
-                  className="px-3 py-1 rounded-md border border-gray-200"
-                >
+                <button onClick={() => setShowModal(false)} className="px-3 py-1 rounded-md border border-gray-200">
                   Cancel
                 </button>
-                <button
-                  onClick={handleSave}
-                  className="px-3 py-1 rounded-md bg-emerald-600 text-white"
-                >
+                <button onClick={handleSave} className="px-3 py-1 rounded-md bg-emerald-600 text-white">
                   Save Job
                 </button>
               </div>
-            </div>
 
+            </div>
           </div>
         </div>
       )}
@@ -260,7 +275,7 @@ export default function JobsPage() {
   );
 }
 
-/* ---------------- UI HELPERS ---------------- */
+/* ---------------- UI HELPERS (UNCHANGED) ---------------- */
 
 const Input = ({ label, value, onChange, placeholder }) => (
   <div>

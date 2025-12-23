@@ -148,7 +148,11 @@ const titles = [
       </div>
 
       {/* ENQUIRY MODAL */}
-      <EnquiryModal open={open} onClose={() => setOpen(false)} />
+     <EnquiryModal
+  open={open}
+  onClose={() => setOpen(false)}
+  source="partner"
+/>
     </section>
   );
 }
