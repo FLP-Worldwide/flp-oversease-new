@@ -22,21 +22,35 @@ const LeadSchema = new mongoose.Schema(
        enum: [
   "enquiry",
   "callback",
+  "manual",
   "partner",
   "hire_manpower",
   "request_workforce",
   "hire-manpower",        // legacy
   "request-workforce"    // legacy
-]
-,
+],
         required: true,
         },
+// models/Leads.js
+history: [
+  {
+    text: String,
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
+  },
+],
+sequence: {
+  type: Number,
+  default: 0,
+},
 
 
     // KANBAN STATUS
     status: {
       type: String,
-      enum: ["todo", "in-progress", "done"],
+      enum: ["todo", "in-progress", "done", "invalid", "delete"],
       default: "todo",
     },
 

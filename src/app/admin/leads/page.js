@@ -1,93 +1,139 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 
-/* ---------------- INITIAL DATA ---------------- */
+/* ---------------- STATIC COLUMNS ---------------- */
 
 const initialColumns = [
-  {
-    id: "todo",
-    title: "Todo",
-    description: "This item hasn't been started",
-  },
-  {
-    id: "inprogress",
-    title: "In Progress",
-    description: "This is actively being worked on",
-  },
-  {
-    id: "done",
-    title: "Done",
-    description: "This has been completed",
-  },
-];
-
-const initialLeads = [
-  {
-    id: "1",
-    name: "Lead 1",
-    email: "lead1@mail.com",
-    phone: "9998887771",
-    status: "todo",
-    history: ["Lead created"],
-  },
-  {
-    id: "2",
-    name: "Lead 2",
-    email: "lead1@mail.com",
-    phone: "9998887771",
-    status: "todo",
-    history: ["Lead created"],
-  },
+  { id: "todo", title: "Todo", description: "This item hasn't been started" },
+  { id: "inprogress", title: "In Progress", description: "This is actively being worked on" },
+  { id: "done", title: "Done", description: "This has been completed" },
+  { id: "invalid", title: "Innvalid", description: "This has been marked as invalid" },
+  { id: "delete", title: "Delete", description: "This has been deleted" },
 ];
 
 export default function LeadsPage() {
   const [columns, setColumns] = useState(initialColumns);
-  const [leads, setLeads] = useState(initialLeads);
+  const [leads, setLeads] = useState([]);
 
   const [showCreateLead, setShowCreateLead] = useState(false);
   const [createStatus, setCreateStatus] = useState(null);
 
   const [selectedLead, setSelectedLead] = useState(null);
-const [showStatusModal, setShowStatusModal] = useState(false);
+  const [showStatusModal, setShowStatusModal] = useState(false);
 
-  /* ---------------- DRAG ---------------- */
+  /* ================= FETCH LEADS ================= */
 
-  const onDragEnd = (result) => {
-    const { destination, draggableId } = result;
-    if (!destination) return;
+  const loadLeads = async () => {
+    const res = await fetch("/api/leads");
+    const data = await res.json();
 
-    setLeads((prev) =>
-      prev.map((l) =>
-        l.id === draggableId
-          ? {
-              ...l,
-              status: destination.droppableId,
-              history: [...l.history, `Moved to ${destination.droppableId}`],
-            }
-          : l
-      )
-    );
+    if (!data.success) return;
+
+const UI_STATUS_MAP = {
+  todo: "todo",
+  "in-progress": "inprogress",
+  done: "done",
+  invalid: "invalid",
+  delete: "delete",
+};
+
+setLeads(
+  data.leads
+    .sort((a, b) => (a.sequence || 0) - (b.sequence || 0))
+    .map((l) => ({
+      id: l._id,
+      name:
+        l.fullName ||
+        `${l.firstName || ""} ${l.lastName || ""}`.trim() ||
+        "—",
+      email: l.email,
+      phone: l.phone,
+      companyName: l.companyName,
+      designation: l.designation,
+      industry: l.industry,
+      website: l.website,
+      message: l.message,
+      source: l.source,
+      status: UI_STATUS_MAP[l.status] || "todo",
+      history: l.history?.map((h) => h.text) || ["Lead created"],
+    }))
+);
+
+
   };
 
-  /* ---------------- ADD STATUS (COLUMN) ---------------- */
+  useEffect(() => {
+    loadLeads();
+  }, []);
+
+  const STATUS_MAP = {
+  todo: "todo",
+  inprogress: "in-progress",
+  done: "done",
+  invalid: "invalid",
+  delete: "delete",
+};
+
+const onDragEnd = async (result) => {
+  const { source, destination, draggableId } = result;
+  if (!destination) return;
+
+  // 🚫 Block same-column reorder
+  if (source.droppableId === destination.droppableId) return;
+
+  const apiStatus = STATUS_MAP[destination.droppableId];
+
+  // Optimistic UI
+  setLeads((prev) =>
+    prev.map((l) =>
+      l.id === draggableId
+        ? { ...l, status: destination.droppableId }
+        : l
+    )
+  );
+
+  // API update
+  const res = await fetch("/api/leads", {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      id: draggableId,
+      status: apiStatus,
+      comment: `Moved to ${apiStatus}`,
+    }),
+  });
+
+  // 🔁 RELOAD FROM DB (IMPORTANT)
+  if (res.ok) {
+    loadLeads();
+  }
+};
 
 
 
-  /* ---------------- CREATE LEAD ---------------- */
 
-  const createLead = (data) => {
-    setLeads((prev) => [
-      {
-        id: Date.now().toString(),
-        ...data,
+  /* ================= CREATE LEAD ================= */
+
+  const createLead = async (data) => {
+    const res = await fetch("/api/leads", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        fullName: data.name,
+        email: data.email,
+        phone: data.phone,
+        source: "manual",
         status: createStatus,
-        history: ["Lead created"],
-      },
-      ...prev,
-    ]);
-    setShowCreateLead(false);
+      }),
+    });
+
+    const result = await res.json();
+    if (result.success) {
+      loadLeads();
+      setShowCreateLead(false);
+    }
   };
 
   return (
@@ -103,22 +149,19 @@ const [showStatusModal, setShowStatusModal] = useState(false);
 
       {/* KANBAN */}
       <DragDropContext onDragEnd={onDragEnd}>
-        <div className="flex gap-4 overflow-x-auto pb-4 ">
+        <div className="flex gap-4 overflow-x-auto pb-4">
 
           {columns.map((col) => {
-            const columnLeads = leads.filter(
-              (l) => l.status === col.id
-            );
+            const columnLeads = leads.filter((l) => l.status === col.id);
 
             return (
-              <Droppable droppableId={col.id} key={col.id}>
+              <Droppable droppableId={col.id} key={col.id} isDragDisabled={false}>
                 {(provided) => (
                   <div
                     ref={provided.innerRef}
                     {...provided.droppableProps}
                     className="bg-white min-w-[320px] bg-gray-50 rounded-xl border border-gray-200 p-3 flex flex-col min-h-[520px]"
                   >
-                    {/* COLUMN HEADER (UNCHANGED UI) */}
                     <div className="mb-3">
                       <h3 className="font-semibold text-sm">
                         {col.title} ({columnLeads.length})
@@ -128,7 +171,6 @@ const [showStatusModal, setShowStatusModal] = useState(false);
                       </p>
                     </div>
 
-                    {/* CARDS */}
                     <div className="flex-1 space-y-3">
                       {columnLeads.map((lead, index) => (
                         <Draggable
@@ -144,12 +186,14 @@ const [showStatusModal, setShowStatusModal] = useState(false);
                               onClick={() => setSelectedLead(lead)}
                               className="bg-gray-50 rounded-lg border border-gray-200 p-3 shadow-sm hover:shadow transition cursor-pointer"
                             >
+                              
                               <div className="text-sm font-medium">
                                 {lead.name}
                               </div>
                               <div className="text-xs text-gray-600 mt-1">
                                 {lead.email}
                               </div>
+                              <spann className="text-xs text-blue-700 bg-blue-100 px-2 py-1 rounded">{lead.source}</spann>
                             </div>
                           )}
                         </Draggable>
@@ -157,7 +201,6 @@ const [showStatusModal, setShowStatusModal] = useState(false);
                       {provided.placeholder}
                     </div>
 
-                    {/* ADD LEAD (UNCHANGED POSITION) */}
                     <button
                       onClick={() => {
                         setCreateStatus(col.id);
@@ -173,44 +216,38 @@ const [showStatusModal, setShowStatusModal] = useState(false);
             );
           })}
 
-          {/* ADD MORE STATUS */}
-          <div className="min-w-[220px] flex items-center justify-center">
+          {/* <div className="min-w-[220px] flex items-center justify-center">
             <button
               onClick={() => setShowStatusModal(true)}
               className="h-10 px-4 rounded-lg border border-dashed text-sm text-gray-600 hover:bg-gray-50"
             >
               + Add Status
             </button>
-          </div>
+          </div> */}
 
         </div>
       </DragDropContext>
 
-      {/* CREATE LEAD MODAL */}
       {showCreateLead && (
         <CreateLeadModal
           onClose={() => setShowCreateLead(false)}
           onSave={createLead}
         />
       )}
+
       {showStatusModal && (
         <CreateStatusModal
           onClose={() => setShowStatusModal(false)}
           onSave={(data) => {
             setColumns((prev) => [
               ...prev,
-              {
-                id: `status-${Date.now()}`,
-                title: data.title,
-                description: data.description,
-              },
+              { id: data.title.toLowerCase(), ...data },
             ]);
             setShowStatusModal(false);
           }}
         />
       )}
 
-      {/* LEAD DETAIL MODAL */}
       {selectedLead && (
         <LeadDetailModal
           lead={selectedLead}
@@ -221,14 +258,10 @@ const [showStatusModal, setShowStatusModal] = useState(false);
   );
 }
 
-/* ---------------- MODALS (UI CONSISTENT) ---------------- */
+/* ================= MODALS ================= */
 
 function CreateLeadModal({ onClose, onSave }) {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
+  const [form, setForm] = useState({ name: "", email: "", phone: "" });
 
   return (
     <Modal title="Create Lead" onClose={onClose}>
@@ -252,25 +285,60 @@ function CreateLeadModal({ onClose, onSave }) {
 }
 
 function LeadDetailModal({ lead, onClose }) {
+  const [comment, setComment] = useState("");
+
+  const addComment = async () => {
+    if (!comment.trim()) return;
+
+    await fetch("/api/leads", {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id: lead.id,
+        comment,
+      }),
+    });
+
+    lead.history.push(comment);
+    setComment("");
+  };
+
   return (
     <Modal title="Lead Details" onClose={onClose}>
-      <p className="text-sm"><b>Name:</b> {lead.name}</p>
-      <p className="text-sm"><b>Email:</b> {lead.email}</p>
-      <p className="text-sm"><b>Phone:</b> {lead.phone}</p>
+  <p className="text-sm"><b>Name:</b> {lead.name}</p>
+  <p className="text-sm"><b>Email:</b> {lead.email}</p>
+  <p className="text-sm"><b>Phone:</b> {lead.phone}</p>
+  {lead.companyName && <p className="text-sm"><b>Company:</b> {lead.companyName}</p>}
+  {lead.designation && <p className="text-sm"><b>Designation:</b> {lead.designation}</p>}
+  {lead.industry && <p className="text-sm"><b>Industry:</b> {lead.industry}</p>}
+  {lead.website && <p className="text-sm"><b>Website:</b> {lead.website}</p>}
+  {lead.message && <p className="text-sm"><b>Message:</b> {lead.message}</p>}
+  <p className="text-sm"><b>Source:</b> {lead.source}</p>
 
-      <div className="mt-4">
-        <h4 className="text-sm font-semibold">History</h4>
-        <ul className="list-disc ml-5 text-sm">
-          {lead.history.map((h, i) => (
-            <li key={i}>{h}</li>
-          ))}
-        </ul>
-      </div>
-    </Modal>
+  <div className="mt-4">
+    <h4 className="text-sm font-semibold">History / Follow-ups</h4>
+    <ul className="list-disc ml-5 text-sm">
+      {lead.history.map((h, i) => (
+        <li key={i}>{h}</li>
+      ))}
+    </ul>
+  </div>
+
+  <div className="mt-4">
+    <Input label="Add Comment / Follow-up" onChange={setComment} />
+    <button
+      onClick={addComment}
+      className="mt-2 px-3 py-1 rounded-md bg-blue-600 text-white text-sm"
+    >
+      Add Follow-up
+    </button>
+  </div>
+</Modal>
+
   );
 }
 
-/* ---------------- SHARED ---------------- */
+/* ================= SHARED ================= */
 
 function Modal({ title, children, onClose }) {
   return (
@@ -295,35 +363,21 @@ function Input({ label, onChange }) {
     </div>
   );
 }
+
 function CreateStatusModal({ onClose, onSave }) {
-  const [form, setForm] = useState({
-    title: "",
-    description: "",
-  });
+  const [form, setForm] = useState({ title: "", description: "" });
 
   return (
     <Modal title="Add Status" onClose={onClose}>
-      <Input
-        label="Status Title"
-        onChange={(v) => setForm({ ...form, title: v })}
-      />
-      <Input
-        label="Description"
-        onChange={(v) => setForm({ ...form, description: v })}
-      />
+      <Input label="Status Title" onChange={(v) => setForm({ ...form, title: v })} />
+      <Input label="Description" onChange={(v) => setForm({ ...form, description: v })} />
 
       <div className="flex justify-end gap-2 mt-4">
-        <button
-          onClick={onClose}
-          className="px-3 py-1 rounded-md border"
-        >
+        <button onClick={onClose} className="px-3 py-1 rounded-md border">
           Cancel
         </button>
         <button
-          onClick={() => {
-            if (!form.title.trim()) return;
-            onSave(form);
-          }}
+          onClick={() => form.title && onSave(form)}
           className="px-3 py-1 rounded-md bg-emerald-600 text-white"
         >
           Add
