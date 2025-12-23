@@ -1,17 +1,15 @@
 // src/components/admin/AdminSidebar.jsx
 "use client";
-
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
   DashboardOutlined,
   UsergroupAddOutlined,
-  ShoppingOutlined,
-  FileSearchOutlined,
-  SettingOutlined,
+
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  MediumOutlined,
+
   ProductOutlined,
   CodeSandboxOutlined
 } from "@ant-design/icons";
@@ -24,12 +22,24 @@ const nav = [
   { key: "resume", label: "Resume Download", href: "/admin/resume", icon: <UsergroupAddOutlined /> },
 ];
 
+
 export default function AdminSidebar() {
   const pathname = usePathname() || "/admin";
   const parts = pathname.split("/").filter(Boolean);
   const active = parts[1] || "dashboard";
-
+const router = useRouter();
   const [collapsed, setCollapsed] = useState(false);
+async function logout() {
+  await fetch("/api/admin/logout", { method: "POST" });
+  window.location.href = "/admin/login";
+}
+  async function handleLogout() {
+    await fetch("/api/admin/logout", {
+      method: "POST",
+    });
+
+    router.replace("/admin/login");
+  }
 
   useEffect(() => {
     const saved = typeof window !== "undefined" && localStorage.getItem("admin_sidebar_collapsed");
@@ -123,7 +133,12 @@ export default function AdminSidebar() {
     })}
   </ul>
 </nav>
-
+<button
+        onClick={handleLogout}
+        className="text-sm text-white hover:underline"
+      >
+        Logout
+      </button>
 
           {/* footer */}
           <div className="mt-4 pt-3 border-t border-gray-100 text-xs text-white">
