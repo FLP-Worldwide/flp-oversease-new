@@ -9,6 +9,7 @@ import AboutSection from '@/components/home/AboutSection';
 import FaqSection from '@/components/layout/FaqSection';
 import HeroSection from '@/components/home/HeroSection';
 import ResumeBuilderSection from '@/components/home/ResumeBuilderSection';
+export const dynamic = "force-dynamic";
 
 export default async function Page({ params }) {
   const { locale } = await params;

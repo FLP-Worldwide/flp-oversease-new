@@ -1,12 +1,19 @@
-'use client';
+"use client";
 
-import React, { useRef } from 'react';
-import html2pdf from 'html2pdf.js';
+import React, { useRef } from "react";
+import dynamic from "next/dynamic";
+
+const html2pdf = dynamic(() => import("html2pdf.js"), {
+  ssr: false,
+});
+
 
 export default function ResumePreview({ data, onBack, onClose }) {
   const pdfRef = useRef(null);
 
 const downloadPDF = async () => {
+    const html2pdfModule = (await import("html2pdf.js")).default;
+
   try {
     // 1️⃣ Save resume to DB
     await fetch("/api/resumes", {
@@ -16,7 +23,7 @@ const downloadPDF = async () => {
     });
 
     // 2️⃣ Generate PDF
-    await html2pdf()
+    html2pdfModule()
       .set({
         margin: 10,
         filename: `${data.basics.name || "Resume"}.pdf`,
