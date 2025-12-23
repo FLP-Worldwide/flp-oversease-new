@@ -1,26 +1,6 @@
 "use client";
 
-import React from "react";
-
-/* ---------------- MOCK DATA ---------------- */
-
-const userName = "Admin"; // later replace with auth user
-
-const stats = [
-  { title: "Total Jobs Posted", value: 245 },
-  { title: "Active Openings", value: 68 },
-  { title: "Total Enquiries", value: 1420 },
-  { title: "Pending Enquiries", value: 312 },
-  { title: "Total Resumes Created", value: 980 },
-];
-
-const latestLeads = [
-  { id: 1, name: "Amit Kumar", email: "amit@example.com", phone: "9998887771", date: "2025-12-21" },
-  { id: 2, name: "Rekha Sharma", email: "rekha@example.com", phone: "9876543210", date: "2025-12-21" },
-  { id: 3, name: "Mohit Jain", email: "mohit@example.com", phone: "9123456780", date: "2025-12-20" },
-  { id: 4, name: "Pooja Verma", email: "pooja@example.com", phone: "9001122334", date: "2025-12-20" },
-  { id: 5, name: "Ravi Singh", email: "ravi@example.com", phone: "8899776655", date: "2025-12-19" },
-];
+import React, { useEffect, useState } from "react";
 
 /* ---------------- HELPERS ---------------- */
 
@@ -44,6 +24,51 @@ function getCurrentTime() {
 /* ---------------- PAGE ---------------- */
 
 export default function AdminPage() {
+  const userName = "Admin";
+
+  const [stats, setStats] = useState([]);
+  const [latestLeads, setLatestLeads] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  /* ---------------- FETCH ALL DASHBOARD DATA ---------------- */
+  useEffect(() => {
+    async function loadDashboard() {
+      try {
+        const [jobsRes, leadsRes, resumesRes] = await Promise.all([
+          fetch("/api/jobs").then(res => res.json()),
+          fetch("/api/leads").then(res => res.json()),
+          fetch("/api/resumes").then(res => res.json()),
+        ]);
+
+        const jobs = jobsRes.jobs || [];
+        const leads = leadsRes.leads || [];
+        const resumes = resumesRes.resumes || [];
+
+        setStats([
+          { title: "Total Jobs Posted", value: jobs.length },
+          {
+            title: "Active Openings",
+            value: jobs.filter(j => j.status === "active").length,
+          },
+          { title: "Total Enquiries", value: leads.length },
+          {
+            title: "Pending Enquiries",
+            value: leads.filter(l => l.status === "todo").length,
+          },
+          { title: "Total Resumes Created", value: resumes.length },
+        ]);
+
+        setLatestLeads(leads.slice(0, 5));
+      } catch (err) {
+        console.error("Dashboard load failed", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    loadDashboard();
+  }, []);
+
   return (
     <div className="space-y-6">
 
@@ -63,13 +88,13 @@ export default function AdminPage() {
         </div>
       </div>
 
-      {/* METRICS (3 PER ROW) */}
+      {/* METRICS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {stats.map((item, index) => (
           <MetricCard
             key={index}
             title={item.title}
-            value={item.value}
+            value={loading ? "—" : item.value}
             highlight={item.title === "Pending Enquiries"}
           />
         ))}
@@ -95,13 +120,23 @@ export default function AdminPage() {
 
             <tbody className="divide-y divide-gray-200">
               {latestLeads.map((lead) => (
-                <tr key={lead.id}>
-                  <td className="py-2 px-4 text-sm">{lead.name}</td>
+                <tr key={lead._id}>
+                  <td className="py-2 px-4 text-sm">{lead.fullName}</td>
                   <td className="py-2 px-4 text-sm text-gray-700">{lead.email}</td>
                   <td className="py-2 px-4 text-sm">{lead.phone}</td>
-                  <td className="py-2 px-4 text-sm">{lead.date}</td>
+                  <td className="py-2 px-4 text-sm">
+                    {new Date(lead.createdAt).toLocaleDateString("en-IN")}
+                  </td>
                 </tr>
               ))}
+
+              {!latestLeads.length && !loading && (
+                <tr>
+                  <td colSpan="4" className="py-4 text-center text-sm text-gray-500">
+                    No leads found
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
         </div>

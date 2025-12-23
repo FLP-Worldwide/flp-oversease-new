@@ -6,24 +6,38 @@ import html2pdf from 'html2pdf.js';
 export default function ResumePreview({ data, onBack, onClose }) {
   const pdfRef = useRef(null);
 
-  const downloadPDF = async () => {
+const downloadPDF = async () => {
+  try {
+    // 1️⃣ Save resume to DB
+    await fetch("/api/resumes", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    // 2️⃣ Generate PDF
     await html2pdf()
       .set({
         margin: 10,
-        filename: `${data.basics.name || 'Resume'}.pdf`,
+        filename: `${data.basics.name || "Resume"}.pdf`,
         html2canvas: {
           scale: 4,
-          backgroundColor: '#ffffff',
+          backgroundColor: "#ffffff",
         },
         jsPDF: {
-          unit: 'mm',
-          format: 'a4',
-          orientation: 'portrait',
+          unit: "mm",
+          format: "a4",
+          orientation: "portrait",
         },
       })
       .from(pdfRef.current)
       .save();
-  };
+  } catch (err) {
+    console.error(err);
+    alert("Failed to save resume");
+  }
+};
+
 
   return (
     <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center">
