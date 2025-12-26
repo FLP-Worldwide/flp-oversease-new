@@ -57,3 +57,16 @@ body {
   outline: none;
   border-color: #2563eb;
 }
+
+
+/* Increase Tiptap editor writing area height globally */
+.ProseMirror {
+  min-height: 350px !important;
+  padding: 16px !important;
+}
+
+/* Optional — smooth scroll when content grows */
+.ProseMirror {
+  max-height: 600px;
+  overflow-y: auto;
+}

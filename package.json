@@ -11,6 +11,10 @@
   "dependencies": {
     "@ant-design/icons": "^6.1.0",
     "@hello-pangea/dnd": "^18.0.1",
+    "@tiptap/extension-image": "^3.14.0",
+    "@tiptap/extension-link": "^3.14.0",
+    "@tiptap/react": "^3.14.0",
+    "@tiptap/starter-kit": "^3.14.0",
     "ant-design": "^1.0.0",
     "html2pdf.js": "^0.12.1",
     "lucide-react": "^0.562.0",

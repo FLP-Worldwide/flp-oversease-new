@@ -9,6 +9,7 @@ import AboutSection from '@/components/home/AboutSection';
 import FaqSection from '@/components/layout/FaqSection';
 import HeroSection from '@/components/home/HeroSection';
 import ResumeBuilderSection from '@/components/home/ResumeBuilderSection';
+import BlogGrid from '@/components/home/BlogSection';
 export const dynamic = "force-dynamic";
 
 export default async function Page({ params }) {
@@ -31,6 +32,7 @@ export default async function Page({ params }) {
       <ResumeBuilderSection />
       <ContactForm t={t} />
       <FaqSection />
+      <BlogGrid locale={locale} />
       <Footer t={t} />
 
       

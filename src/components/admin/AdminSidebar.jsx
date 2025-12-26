@@ -20,6 +20,7 @@ const nav = [
   { key: "jobs", label: "Job Post", href: "/admin/jobs", icon: <CodeSandboxOutlined /> },
   { key: "leads", label: "Leads", href: "/admin/leads", icon: <ProductOutlined /> },
   { key: "resume", label: "Resume Download", href: "/admin/resume", icon: <UsergroupAddOutlined /> },
+  { key: "blogs", label: "Blogs", href: "/admin/blogs", icon: <UsergroupAddOutlined /> },
 ];
 
 
