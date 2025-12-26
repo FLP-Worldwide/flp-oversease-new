@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "cta": "Reservar una Llamada"
+  },
+
+  "hero": {
+    "title": "Elija ahora una de las mejores soluciones para la contratación de trabajadores nacionales e internacionales",
+    "titleAlt": "Contratación de trabajadores nacionales e internacionales en todos los sectores, ahora al alcance de su mano",
+    "subtitle": "Colaboramos con empleadores, agencias de personal, instituciones y gobiernos para proporcionar mano de obra preparada en idioma, capacitada y legalmente compatible para Europa, Japón, el Golfo y otros mercados globales.",
+    "primaryBtn": "Construir un Pipeline de Talento con Nosotros",
+    "secondaryBtn": "Contratar Mano de Obra para Europa"
+  },
+
+  "about": {
+    "badge": "Sobre Nosotros",
+    "title": "Por qué los empleadores globales eligen FLP Overseas",
+    "subtitle": "En el mercado laboral actual, contratar internacionalmente no se trata sólo de encontrar candidatos, sino de reducir riesgos, garantizar cumplimiento legal y construir estabilidad laboral a largo plazo.",
+    "highlight": "FLP Overseas existe precisamente para eso:",
+    "slogan": "No enviamos candidatos, construimos soluciones laborales.",
+    "points": [
+      "Agencia licenciada por el Gobierno de India y MEA",
+      "Procesos internacionales de contratación legalmente compatibles",
+      "Preparación laboral basada en la demanda real",
+      "Reclutamiento ético con política de cero explotación",
+      "Soluciones escalables para PYMES y grandes empresas"
+    ]
+  },
+
+  "stats": {
+    "govt": "Aprobado por el Gobierno de la India",
+    "license1": "Ministerio de Asuntos Corporativos (Lic: U78100DL2023PTC421528)",
+    "license2": "Ministerio de Asuntos Exteriores (Lic: B-2268/DEL/COM/100/5/10739/2024)"
+  },
+
+  "services": {
+    "heading": "Explore Nuestros Servicios",
+    "subheading": "Soluciones integrales para movilidad laboral global.",
+    "list": [
+      {
+        "title": "Mano de obra preparada, no solo reclutamiento",
+        "desc": "No enviamos candidatos disponibles al azar — preparamos trabajadores listos para el puesto."
+      },
+      {
+        "title": "Modelo integrado de idioma + habilidades",
+        "desc": "La falta de idioma es la principal razón de abandono laboral internacional — por eso integramos entrenamiento lingüístico."
+      },
+      {
+        "title": "Centros de formación basados en la demanda",
+        "desc": "FLP permite a los empleadores establecer centros de capacitación y definir requisitos específicos."
+      }
+    ]
+  },
+
+  "industries": {
+    "list": [
+      { "title": "Manufactura & Producción Industrial" },
+      { "title": "Logística, Almacenes & Cadena de Suministro" },
+      { "title": "Construcción & Infraestructura" },
+      { "title": "Hostelería & Gastronomía" },
+      { "title": "Limpieza & Gestión de Instalaciones" },
+      { "title": "Técnico & Ingeniería" },
+      { "title": "Salud & Enfermería" }
+    ]
+  },
+
+  "form": {
+    "heading": "Enfoque de Colaboración",
+    "subheading": "Construya su fuerza laboral global con FLP Overseas. Si usted es:",
+    "namePlaceholder": "Nombre Completo",
+    "emailPlaceholder": "Correo Electrónico",
+    "phonePlaceholder": "Número de Contacto",
+    "fileLabel": "Documento de Requerimiento",
+    "submitBtn": "Solicitar Llamada",
+    "tabCandidate": "Contratar Mano de Obra para Europa",
+    "tabEmployer": "Solicitar Propuesta de Personal",
+    "messagePlaceholder": "Cuéntenos brevemente sus requerimientos..."
+  },
+
+  "countries": [
+    "Alemania",
+    "Austria",
+    "Suiza",
+    "Países Bajos",
+    "Bélgica",
+    "Francia",
+    "Italia",
+    "España",
+    "Polonia",
+    "República Checa",
+    "Eslovaquia",
+    "Hungría",
+    "Rumanía",
+    "Balcanes",
+    "Escandinavia",
+    "Japón",
+    "Emiratos Árabes Unidos",
+    "Arabia Saudita",
+    "Catar",
+    "Kuwait",
+    "Omán",
+    "Baréin"
+  ],
+
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Respuestas sobre contratación, cumplimiento, capacitación y movilidad laboral",
+    "list": [
+      { "q": "¿FLP Overseas está aprobado por el gobierno?", "a": "Sí. FLP Overseas está licenciada por el MEA y registrada en el MCA del Gobierno de India." },
+      { "q": "¿Cuál es su número de licencia MEA?", "a": "B-3084/RAJ/COM/100/5/11092/2025" },
+      { "q": "¿Para qué países reclutan?", "a": "Europa, Japón, países del Golfo y destinos globales seleccionados." },
+      { "q": "¿Ofrecen capacitación en idiomas?", "a": "Sí. Alemán, Japonés, Francés, Inglés, idiomas Escandinavos y Balcánicos." },
+      { "q": "¿El idioma es obligatorio para todos los trabajos?", "a": "Depende del país. Para Alemania y salud es obligatorio." },
+      { "q": "¿Garantizan empleo o visa?", "a": "No. Depende del empleador y del proceso legal." },
+      { "q": "¿En qué industrias están especializados?", "a": "Manufactura, logística, construcción, hostelería, salud, limpieza y oficios técnicos." },
+      { "q": "¿Reclutan personal calificado y no calificado?", "a": "Sí. Trabajadores calificados, semi-calificados, white y blue collar." },
+      { "q": "¿Ofrecen contratación masiva?", "a": "Sí. Lotes grandes y proyectos." },
+      { "q": "¿Cómo garantizan el cumplimiento legal?", "a": "Operaciones licenciadas, documentos transparentes y verificación legal." },
+      { "q": "¿Cobran tarifas ilegales a candidatos?", "a": "No. Cumplimos política de cero explotación." },
+      { "q": "¿Los empleadores pueden solicitar solo trabajadores con idioma?", "a": "Sí." },
+      { "q": "¿Ofrecen reclutamiento en salud?", "a": "Sí, especialmente para Alemania y Japón." },
+      { "q": "¿Brindan asistencia en documentación?", "a": "Sí, conforme a requisitos legales." },
+      { "q": "¿Cuánto tiempo tarda el proceso de contratación?", "a": "Depende del país, rol y proceso del empleador." },
+      { "q": "¿Ofrecen apoyo después de la llegada?", "a": "Sí, apoyo básico y onboarding limitado." },
+      { "q": "¿Los candidatos son evaluados técnicamente?", "a": "Sí, cuando es necesario." },
+      { "q": "¿Reclutan para países escandinavos?", "a": "Sí, según demanda y regulaciones." },
+      { "q": "¿Dónde está la sede central de FLP Overseas?", "a": "India." },
+      { "q": "¿Por qué elegir FLP Overseas?", "a": "Licencia gubernamental, formación en idioma, ética y cumplimiento legal." },
+      { "q": "¿Pueden conseguir certificaciones para habilidades?", "a": "Sí. Entrenamiento y certificación según solicitud." },
+      { "q": "¿Ofrecen capacitación personalizada?", "a": "Sí. Programas de idioma, habilidades y cultura laboral." },
+      { "q": "¿Soportan planificación laboral a largo plazo?", "a": "Sí. Contratación escalonada y pipelines laborales." },
+      { "q": "¿Trabajan con agencias internacionales?", "a": "Sí. Asociaciones con firmas de RRHH y empleadores globales." },
+      { "q": "¿Crean centros de formación dedicados?", "a": "Sí, para demanda específica del empleador." },
+      { "q": "¿Contratan recién graduados?", "a": "Sí, con programas de formación." },
+      { "q": "¿Realizan verificación médica?", "a": "Sí, según requisitos del país destino." },
+      { "q": "¿Ayudan con reconocimiento de títulos?", "a": "Sí, especialmente para Alemania." },
+      { "q": "¿Tienen experiencia en salud?", "a": "Sí, en enfermería y cuidado asistencial." },
+      { "q": "¿El empleador puede entrevistar candidatos?", "a": "Sí — online o presencial." },
+      { "q": "¿Tienen candidatos multilingües?", "a": "Sí — alemán, japonés, inglés y más." },
+      { "q": "¿Cómo garantizan retención laboral?", "a": "Formación en idioma, cultura y SOP del empleador." },
+      { "q": "¿Apoyan migración familiar?", "a": "Dependiendo del tipo de visa — se asesora cuando aplica." },
+      { "q": "¿Los contratos son transparentes y legales?", "a": "Sí — totalmente compatibles con leyes laborales." },
+      { "q": "¿Contratan para empleos temporales y permanentes?", "a": "Ambos disponibles." },
+      { "q": "¿Manejan reemplazos?", "a": "Según acuerdo con el empleador." },
+      { "q": "¿Ofrecen soporte post-llegada?", "a": "Sí — integración y acompañamiento inicial." },
+      { "q": "¿Pueden suministrar supervisores y jefes de equipo?", "a": "Sí, sujeto a disponibilidad." },
+      { "q": "¿Reclutan mujeres?", "a": "Sí — según rol y sector." },
+      { "q": "¿Los trabajadores están asegurados?", "a": "Según normas del país o empleador." },
+      { "q": "¿Reclutan solo desde India?", "a": "Principalmente India — otros países bajo demanda." },
+      { "q": "¿Cómo iniciar colaboración?", "a": "Contáctenos → evaluación → onboarding." },
+      { "q": "¿Trabajan con PYMES?", "a": "Sí — pequeñas, medianas y grandes empresas." },
+      { "q": "¿Cumplen estándares laborales internacionales?", "a": "Sí — reclutamiento ético y legal." },
+      { "q": "¿Pueden escalar la contratación gradualmente?", "a": "Sí — despliegue por fases." },
+      { "q": "¿Ofrecen documentación en varios idiomas?", "a": "Sí — cuando se requiere." },
+      { "q": "¿Apoyan proyectos gubernamentales?", "a": "Sí — con aprobación y alcance definido." },
+      { "q": "¿Qué hace diferente a FLP Overseas?", "a": "Ética, entrenamiento, cumplimiento y calidad." },
+      { "q": "¿Cómo contactar a FLP Overseas?", "a": "Email: info@flpoverseas.com o formulario del sitio web." }
+    ]
+  }
+}

@@ -23,7 +23,7 @@ export default function AboutSection({ t }) {
         </div>
 
         {/* RIGHT → CONTENT */}
-        <div className="space-y-6">
+        <div className="space-y-4">
           <span className="inline-block px-4 py-2 text-xs font-bold uppercase tracking-wider
             bg-blue-100 text-blue-700 rounded-full">
             {t.about.badge}
@@ -37,6 +37,10 @@ export default function AboutSection({ t }) {
             {t.about.subtitle}
           </p>
 
+          <p className="text-gray-600 leading-relaxed font-semibold ">
+            {t.about.highlight}
+          </p>
+
           <ul className="space-y-4 pt-4">
             {t.about.points.map((point, i) => (
               <li key={i} className="flex items-start gap-3">
@@ -45,6 +49,11 @@ export default function AboutSection({ t }) {
               </li>
             ))}
           </ul>
+
+          <p className="text-gray-600 leading-relaxed font-semibold ">
+            {t.about.slogan}
+          </p>
+
         </div>
       </div>
     </section>

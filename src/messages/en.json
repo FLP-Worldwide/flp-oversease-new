@@ -10,19 +10,22 @@
 "hero": {
   "title": "Choose now one of the best solutions for recruiting domestic and international workers",
   "titleAlt": "Recruitment of domestic and international workers in all fields now in your fingertips",
-  "subtitle": "FLP Overseas delivers job-ready skilled and blue-collar talent for Germany, Europe, Japan, and the Gulf—trained to international standards and tailored to your workforce needs.",
-  "primaryBtn": "Partner with FLP Overseas",
+  "subtitle": "We partner with employers, staffing companies, institutions, and governments to deliver custom-trained, language-ready, and legally compliant manpower for Europe, Japan, the Gulf, and global markets.",
+  "primaryBtn": "Build a Workforce Pipeline With Us",
   "secondaryBtn": "Hire Manpower for Europe"
 },
 "about": {
   "badge": "About Us",
-  "title": "Trusted International Recruitment Partner",
-  "subtitle": "We help companies hire reliable domestic and international workers while supporting candidates with transparent, legal, and ethical recruitment practices.",
+  "title": "Why Global Employers Choose FLP Overseas",
+  "subtitle": "In today’s labor market, hiring internationally is no longer about sourcing candidates. It is about reducing risk, ensuring compliance, and securing long-term workforce stability. ",
+  "highlight":"FLP Overseas is built precisely for that purpose:",
+  "slogan":"We do not push candidates. We build workforce solutions.",
   "points": [
-    "Government compliant recruitment process",
-    "Skilled & verified workforce",
-    "End-to-end hiring support",
-    "Trusted by European employers"
+    "Government of India & MEA licensed recruitment agency",
+    "Legally compliant international hiring processes",
+    "Demand-driven manpower preparation",
+    "Ethical recruitment with zero-exploitation policy",
+    "Scalable solutions for SMEs to large enterprises"
   ]
 }
 ,
@@ -37,38 +40,35 @@
     "subheading": "Comprehensive solutions for global workforce mobility.",
     "list": [
       {
-        "title": "Manpower Supply",
-        "desc": "Providing all solutions for overseas recruitment across various sectors."
+        "title": "Workforce Readiness, Not Just Recruitment",
+        "desc": "We do not send “available candidates.” We prepare job-ready manpower aligned with your operational reality."
       },
       {
-        "title": "Student Visa",
-        "desc": "Guidance and processing for students looking to study abroad."
+        "title": "Integrated Language + Skill Model",
+        "desc": "Language failure is the #1 reason for attrition in international hiring. FLP integrates language training into recruitment."
       },
       {
-        "title": "Management Consultancy",
-        "desc": "Strategic advice to improve organizational performance and efficiency."
-      },
-      {
-        "title": "Recruitment Consultancy",
-        "desc": "End-to-end recruitment services for specialized industries."
+        "title": "Demand-Based Training & Skill Centers",
+        "desc": "FLP Overseas actively invites employers and partners to: Set up dedicated skill training centers, Define role-specific skill & language requirements."
       }
     ]
   },
 
   "industries": {
     "list": [
-      { "title": "Medical & Health Care" },
-      { "title": "Logistic Industry" },
-      { "title": "Construction" },
-      { "title": "Oil & Gas" },
-      { "title": "Logistic Industry" },
-      { "title": "Construction" }
+      { "title": "Manufacturing & Industrial Production" },
+      { "title": "Logistics, Warehousing & Supply Chain" },
+      { "title": "Construction & Infrastructure" },
+      { "title": "Hospitality & Gastronomy" },
+      { "title": "Cleaning & Facility Management" },
+      { "title": "Technical & Engineering Trades" },
+      { "title": "Healthcare & Nursing" }
     ]
   },
 
   "form": {
-    "heading": "Start Your Journey",
-    "subheading": "Whether you are hiring or looking for a job, we are here to help.",
+    "heading": "Partnership Focus",
+    "subheading": "Build Your Global Workforce With FLP Overseas. If you are:",
     "namePlaceholder": "Full Name",
     "emailPlaceholder": "Email Address",
     "phonePlaceholder": "Contact Number",
@@ -78,15 +78,93 @@
     "tabEmployer": "Request Workforce Proposal",
     "messagePlaceholder": "Tell us about your requirements..."
   },
-
 "countries": [
   "Germany",
-  "Spain",
-  "Poland",
+  "Austria",
+  "Switzerland",
+  "Netherlands",
+  "Belgium",
   "France",
   "Italy",
-  "Netherlands",
-  "Belgium"
+  "Spain",
+  "Poland",
+  "Czech Republic",
+  "Slovakia",
+  "Hungary",
+  "Romania",
+  "Balkans",
+  "Scandinavia",
+  "Japan",
+  "UAE",
+  "Saudi Arabia",
+  "Qatar",
+  "Kuwait",
+  "Oman",
+  "Bahrain"
 ]
+,
+"faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common queries about recruitment, compliance, training & hiring",
+    "list": [
+      { "q": "Is FLP Overseas government approved?", "a": "Yes. FLP Overseas is licensed by the Ministry of External Affairs (MEA) and registered with the Ministry of Corporate Affairs (MCA), Government of India." },
+      { "q": "What is your MEA license number?", "a": "B-3084/RAJ/COM/100/5/11092/2025" },
+      { "q": "Which countries do you recruit for?", "a": "Europe, Japan, Gulf countries, and selected global destinations." },
+      { "q": "Do you provide language training?", "a": "Yes. German, Japanese, French English, Scandinavian, and Balkan language modules are available." },
+      { "q": "Is language mandatory for all jobs?", "a": "It depends on the country and job role. For Germany and healthcare roles, language is mandatory." },
+      { "q": "Do you guarantee jobs or visas?", "a": "No. Selection depends on employer approval and legal process." },
+      { "q": "Which industries do you specialize in?", "a": "Manufacturing, logistics, construction, hospitality, healthcare and more." },
 
+  { "q": "Is FLP Overseas government approved?", "a": "Yes. FLP Overseas is licensed by the Ministry of External Affairs (MEA) and registered with the Ministry of Corporate Affairs (MCA), Government of India." },  
+  { "q": "What is your MEA license number?", "a": "B-3084/RAJ/COM/100/5/11092/2025" },
+  { "q": "What is your MEA license number?", "a": "B-3084/RAJ/COM/100/5/11092/2025" },
+  { "q": "Which countries do you recruit for?", "a": "Europe, Japan, Gulf countries, and selected global destinations." },
+  { "q": "Do you provide language training?", "a": "Yes. German, Japanese, French English, Scandinavian, and Balkan language modules are available." },
+  { "q": "Is language mandatory for all jobs?", "a": "It depends on the country and job role. For Germany and healthcare roles, language is mandatory." },
+  { "q": "Do you guarantee jobs or visas?", "a": "No. We follow ethical recruitment practices. Selection depends on employer approval and legal processes." },
+  { "q": "Which industries do you specialize in?", "a": "Manufacturing, logistics, construction, hospitality, healthcare, cleaning, technical trades." },
+  { "q": "Do you recruit both skilled and unskilled workers?", "a": "Yes. We recruit white-collar, blue-collar, skilled, semi-skilled, and non-skilled workforce." },
+  { "q": "Do you provide bulk hiring services?", "a": "Yes. We handle bulk and project-based hiring." },
+  { "q": "How do you ensure compliance?", "a": "Through licensed operations, transparent documentation, and legal verification." },
+  { "q": "Do you charge candidates illegal fees?", "a": "No. We follow a zero-exploitation policy." },
+  { "q": "Can employers request language-trained workers only?", "a": "Yes." },
+  { "q": "Do you offer healthcare-specific recruitment?", "a": "Yes, especially for Germany and Japan." },
+  { "q": "Do you assist with documentation?", "a": "We coordinate documentation as per legal requirements." },
+  { "q": "How long does recruitment take?", "a": "Depends on role, country, and employer process." },
+  { "q": "Do you provide post-deployment support?", "a": "Yes, limited onboarding and follow-up support." },
+  { "q": "Are your candidates trade-tested?", "a": "Yes, where required." },
+  { "q": "Can you recruit for Scandinavian countries?", "a": "Yes, subject to employer demand and regulations." },
+  { "q": "Where is FLP Overseas headquartered?", "a": "India." },
+  { "q": "Why should employers choose FLP Overseas?", "a": "Government approval, language readiness, ethical recruitment, and compliance focus." },
+  { "q": "Can employers request candidates with specific skill certifications?", "a": "Yes. We source and train candidates as per certification requirements." },
+  { "q": "Can FLP Overseas customize training?", "a": "Yes, including skill, language, and cultural readiness." },
+  { "q": "Do you support workforce planning?", "a": "Yes. Pipeline hiring and phased deployment available." },
+  { "q": "Do you work with agencies abroad?", "a": "Yes. We collaborate with staffing companies and employers abroad." },
+  { "q": "Do you build dedicated training centers?", "a": "Yes. Employers can collaborate for customized centers." },
+  { "q": "Do you hire freshers?", "a": "Yes. Training and readiness programs available." },
+  { "q": "Are candidates medically verified?", "a": "Yes. As per destination country requirements." },
+  { "q": "Do you assist qualification recognition?", "a": "Yes, including Germany-related processes." },
+  { "q": "Experience in healthcare?", "a": "Strong nursing, caregiving and medical support recruitment." },
+  { "q": "Can employers interview candidates?", "a": "Yes — virtual or physical interviews & trade tests." },
+  { "q": "Do you provide multilingual candidates?", "a": "Yes — German, Japanese, English & more." },
+  { "q": "How do you ensure retention?", "a": "Language + culture readiness & employer SOP training." },
+  { "q": "Do you support family migration?", "a": "Subject to visa rules and categories — guidance provided." },
+  { "q": "Are contracts transparent?", "a": "Yes. All legally compliant contracts." },
+  { "q": "Do you recruit seasonal & permanent roles?", "a": "Both seasonal & long-term hiring available." },
+  { "q": "Do you handle replacements?", "a": "Depends on employer agreement terms." },
+  { "q": "Post-arrival support available?", "a": "Yes — limited onboarding support." },
+  { "q": "Do you provide supervisors?", "a": "Yes — based on availability." },
+  { "q": "Do you recruit female candidates?", "a": "Yes — opportunity based and role suitable." },
+  { "q": "Are candidates insured?", "a": "Insurance follows employer/country rules." },
+  { "q": "Do you recruit only from India?", "a": "Mostly India, with additional sourcing regions if needed." },
+  { "q": "How can we collaborate?", "a": "Contact us — requirement assessment & onboarding follows." },
+  { "q": "Suitable for small & mid employers?", "a": "Yes — SMEs to large enterprises." },
+  { "q": "Do you follow labor standards?", "a": "Yes — international recruitment ethics compliant." },
+  { "q": "Can hiring be scaled gradually?", "a": "Yes — phased hiring supported." },
+  { "q": "Multilingual documentation supported?", "a": "Yes — where required." },
+  { "q": "Government/institution projects supported?", "a": "Subject to approvals & scope." },
+  { "q": "What makes you different?", "a": "Compliance + training + ethical recruitment." },
+  { "q": "How to contact FLP Overseas?", "a": "Email: info@flpoverseas.com or via website contact form." }
+    ]
+  }
 }

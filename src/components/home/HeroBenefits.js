@@ -9,21 +9,23 @@ export default function HeroBenefits() {
         <div className="flex items-start gap-2">
             <ShieldCheck className="text-blue-500 shrink-0 mt-1" size={18} />
             <p className="text-sm text-gray-700">
-            Ready to work hard as per your company’s needs
+            Government of India & MEA licensed recruitment authority
             </p>
         </div>
 
         <div className="flex items-start gap-2">
             <ShieldCheck className="text-blue-500 shrink-0 mt-1" size={18} />
             <p className="text-sm text-gray-700">
-            Grab domestic and international talents for your company
+            End-to-end workforce lifecycle management
             </p>
         </div>
+
+       
 
         <div className="flex items-start gap-2">
             <ShieldCheck className="text-blue-500 shrink-0 mt-1" size={18} />
             <p className="text-sm text-gray-700">
-            Highly skilled workers
+            Language-trained manpower (German, Japanese, English & more)
             </p>
         </div>
     </div>

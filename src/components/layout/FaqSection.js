@@ -2,29 +2,29 @@
 
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-
 const FAQS = [
   {
-    q: 'How does the overseas recruitment process work?',
-    a: 'We understand your requirements, source verified candidates, conduct interviews, and handle documentation to ensure a smooth hiring process.'
+    q: 'Is FLP Overseas government approved?',
+    a: 'Yes. FLP Overseas is licensed by the Ministry of External Affairs (MEA) and registered with the Ministry of Corporate Affairs (MCA), Government of India.'
+  },
+  {
+    q: 'What is your MEA license number?',
+    a: 'Our official MEA recruitment license number is B-3084/RAJ/COM/100/5/11092/2025.'
   },
   {
     q: 'Which countries do you recruit for?',
-    a: 'We specialize in recruitment for Europe, the Middle East, and other international markets depending on employer needs.'
+    a: 'Europe, Japan, Gulf & Middle East nations, and other global destinations depending on employer requirements.'
   },
   {
-    q: 'Do you provide government-approved recruitment?',
-    a: 'Yes, we are a government-approved overseas recruitment agency and follow all legal and compliance requirements.'
+    q: 'Do you provide language training?',
+    a: 'Yes. We offer German, Japanese, French, English, Scandinavian, and Balkan language modules based on job needs.'
   },
   {
-    q: 'How long does the hiring process take?',
-    a: 'Typically, you will receive suitable profiles within 24–48 working hours after submitting your requirements.'
-  },
-  {
-    q: 'Can candidates submit their CV directly?',
-    a: 'Yes, candidates can upload their CV through our website, and our team will get in touch after review.'
+    q: 'Is language mandatory for all jobs?',
+    a: 'It depends on the country and job role. For Germany & healthcare positions language proficiency is mandatory.'
   }
 ];
+
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -78,6 +78,17 @@ export default function FaqSection() {
             );
           })}
         </div>
+
+        {/* View All Button */}
+        <div className="text-center mt-10">
+          <a
+            href="/en/faqs"   // <-- create full FAQ page later
+            className="inline-block px-6 py-3 rounded-full text-white bg-blue-600 hover:bg-blue-700 font-medium transition"
+          >
+            View All FAQs
+          </a>
+        </div>
+
       </div>
     </section>
   );

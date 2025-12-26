@@ -98,7 +98,7 @@ export default function ContactForm({ t }) {
         <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-blue-950 font-bold">
           1
         </div>
-        <p>Fill out the form with your accurate details.</p>
+        <p>An employer facing labor shortages.</p>
       </div>
 
       <div className="flex items-center gap-4 p-4 bg-blue-900/50 rounded-2xl border border-blue-800">
@@ -106,7 +106,7 @@ export default function ContactForm({ t }) {
           2
         </div>
         <p>
-          Upload your CV (Candidate) or Job Requirement (Employer).
+          A staffing agency seeking reliable sourcing.
         </p>
       </div>
 
@@ -115,7 +115,15 @@ export default function ContactForm({ t }) {
           3
         </div>
         <p>
-          Our expert team reviews and connects with you.
+          An institution planning skill development.
+        </p>
+      </div>
+      <div className="flex items-center gap-4 p-4 bg-blue-900/50 rounded-2xl border border-blue-800">
+        <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center text-blue-950 font-bold">
+          4
+        </div>
+        <p>
+          A company wanting a dedicated workforce pipeline.
         </p>
       </div>
     </div>

@@ -8,85 +8,156 @@
   },
 
   "hero": {
-    "title": "Wählen Sie jetzt eine der besten Lösungen für die Rekrutierung von nationalen und internationalen Arbeitskräften",
-    "titleAlt": "Rekrutierung von nationalen und internationalen Arbeitskräften in allen Bereichen – jetzt in Ihrer Hand",
-    "subtitle": "Wir sind auf internationale Personalvermittlung spezialisiert. Werden Sie Teil unseres Teams in Dubai, Europa und darüber hinaus. Eine großartige Gelegenheit zu lernen, zu wachsen und Ihre Karriere voranzubringen.",
-    "primaryBtn": "Rückruf anfordern",
-    "secondaryBtn": "Für Arbeitgeber"
+    "title": "Wählen Sie jetzt eine der besten Lösungen für die Rekrutierung nationaler und internationaler Arbeitskräfte",
+    "titleAlt": "Rekrutierung nationaler und internationaler Arbeitskräfte in allen Bereichen – jetzt in Ihren Händen",
+    "subtitle": "Wir arbeiten mit Arbeitgebern, Personaldienstleistern, Institutionen und Regierungen zusammen, um maßgeschneiderte, sprachlich vorbereitete und rechtlich konforme Arbeitskräfte für Europa, Japan, den Golf und globale Märkte bereitzustellen.",
+    "primaryBtn": "Workforce-Pipeline mit uns aufbauen",
+    "secondaryBtn": "Arbeitskräfte für Europa einstellen"
   },
 
   "about": {
     "badge": "Über uns",
-    "title": "Vertrauenswürdiger internationaler Rekrutierungspartner",
-    "subtitle": "Wir unterstützen Unternehmen bei der Einstellung zuverlässiger nationaler und internationaler Arbeitskräfte und begleiten Kandidaten mit transparenten, legalen und ethischen Rekrutierungsprozessen.",
+    "title": "Warum globale Arbeitgeber FLP Overseas wählen",
+    "subtitle": "In der heutigen Arbeitswelt geht es bei internationaler Rekrutierung nicht nur um Kandidaten. Es geht darum, Risiken zu minimieren, Compliance sicherzustellen und langfristige Personalstabilität aufzubauen.",
+    "highlight": "FLP Overseas wurde genau dafür entwickelt:",
+    "slogan": "Wir schicken keine Kandidaten – wir bauen Workforce-Lösungen.",
     "points": [
-      "Regierungskonformer Rekrutierungsprozess",
-      "Qualifizierte und geprüfte Arbeitskräfte",
-      "End-to-End-Unterstützung im Einstellungsprozess",
-      "Vertrauen europäischer Arbeitgeber"
+      "Von der indischen Regierung & MEA lizenziert",
+      "Rechtskonforme internationale Rekrutierungsprozesse",
+      "Bedarfsorientierte Arbeitsvorbereitung",
+      "Ethische Rekrutierung ohne Ausbeutung",
+      "Skalierbar für KMU und Großunternehmen"
     ]
   },
 
   "stats": {
     "govt": "Genehmigt von der Regierung Indiens",
-    "license1": "Ministerium für Unternehmensangelegenheiten (Lizenz: U78100DL2023PTC421528)",
-    "license2": "Ministerium für Auswärtige Angelegenheiten (Lizenz: B-2268/DEL/COM/100/5/10739/2024)"
+    "license1": "Ministerium für Unternehmensangelegenheiten (Liz.: U78100DL2023PTC421528)",
+    "license2": "Ministerium für Auswärtige Angelegenheiten (Liz.: B-2268/DEL/COM/100/5/10739/2024)"
   },
 
   "services": {
-    "heading": "Entdecken Sie unsere professionellen Dienstleistungen",
-    "subheading": "Umfassende Lösungen für globale Arbeitskräftemobilität.",
+    "heading": "Unsere professionellen Dienstleistungen",
+    "subheading": "Komplettlösungen für globale Arbeitsmobilität.",
     "list": [
       {
-        "title": "Personalbereitstellung",
-        "desc": "Bereitstellung umfassender Lösungen für die internationale Rekrutierung in verschiedenen Branchen."
+        "title": "Arbeitsbereitschaft statt nur Rekrutierung",
+        "desc": "Wir senden keine zufälligen Kandidaten – wir bereiten qualifizierte, einsatzbereite Arbeitskräfte vor."
       },
       {
-        "title": "Studentenvisum",
-        "desc": "Beratung und Abwicklung für Studierende, die im Ausland studieren möchten."
+        "title": "Integriertes Sprach- und Kompetenzmodell",
+        "desc": "Sprachdefizite sind der Hauptgrund für Abbrüche – deshalb integrieren wir Sprachtraining in die Ausbildung."
       },
       {
-        "title": "Managementberatung",
-        "desc": "Strategische Beratung zur Verbesserung der organisatorischen Leistung und Effizienz."
-      },
-      {
-        "title": "Personalberatung",
-        "desc": "Ganzheitliche Rekrutierungsdienstleistungen für spezialisierte Branchen."
+        "title": "Bedarfsbasierte Trainings- und Skill-Zentren",
+        "desc": "FLP ermöglicht es Arbeitgebern, individuelle Trainingszentren einzurichten und Qualifikationen zu definieren."
       }
     ]
   },
 
   "industries": {
     "list": [
-      { "title": "Medizin & Gesundheitswesen" },
-      { "title": "Logistikbranche" },
-      { "title": "Baugewerbe" },
-      { "title": "Öl & Gas" },
-      { "title": "Logistikbranche" },
-      { "title": "Baugewerbe" }
+      { "title": "Fertigung & industrielle Produktion" },
+      { "title": "Logistik, Lager & Supply Chain" },
+      { "title": "Bau & Infrastruktur" },
+      { "title": "Hotel & Gastronomie" },
+      { "title": "Reinigung & Facility Management" },
+      { "title": "Technische & Ingenieurberufe" },
+      { "title": "Gesundheitswesen & Pflege" }
     ]
   },
 
   "form": {
-    "heading": "Starten Sie Ihre Reise",
-    "subheading": "Ob Sie einstellen oder eine Arbeitsstelle suchen – wir sind für Sie da.",
+    "heading": "Partnerschaftsfokus",
+    "subheading": "Bauen Sie Ihre globale Workforce mit FLP Overseas auf. Wenn Sie:",
     "namePlaceholder": "Vollständiger Name",
-    "emailPlaceholder": "E-Mail-Adresse",
-    "phonePlaceholder": "Kontaktnummer",
-    "fileLabel": "Lebenslauf / Anforderungsdokument hochladen",
-    "submitBtn": "Bewerbung absenden",
-    "tabCandidate": "Ich bin Kandidat",
-    "tabEmployer": "Ich bin Arbeitgeber",
+    "emailPlaceholder": "E-Mail Adresse",
+    "phonePlaceholder": "Telefonnummer",
+    "fileLabel": "Anforderungsdokument",
+    "submitBtn": "Rückruf anfordern",
+    "tabCandidate": "Arbeitskräfte für Europa einstellen",
+    "tabEmployer": "Angebot für Workforce erhalten",
     "messagePlaceholder": "Beschreiben Sie Ihre Anforderungen..."
   },
 
   "countries": [
     "Deutschland",
-    "Spanien",
-    "Polen",
+    "Österreich",
+    "Schweiz",
+    "Niederlande",
+    "Belgien",
     "Frankreich",
     "Italien",
-    "Niederlande",
-    "Belgien"
-  ]
+    "Spanien",
+    "Polen",
+    "Tschechien",
+    "Slowakei",
+    "Ungarn",
+    "Rumänien",
+    "Balkanregion",
+    "Skandinavien",
+    "Japan",
+    "VAE",
+    "Saudi-Arabien",
+    "Katar",
+    "Kuwait",
+    "Oman",
+    "Bahrain"
+  ],
+
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Antworten auf häufige Fragen zu Rekrutierung, Compliance, Schulung und Beschäftigung",
+    "list": [
+      { "q": "Ist FLP Overseas staatlich zugelassen?", "a": "Ja. FLP Overseas ist beim MEA registriert und beim MCA der indischen Regierung eingetragen." },
+      { "q": "Was ist Ihre MEA-Lizenznummer?", "a": "B-3084/RAJ/COM/100/5/11092/2025" },
+      { "q": "Für welche Länder rekrutieren Sie?", "a": "Europa, Japan, Golfstaaten und weitere internationale Regionen." },
+      { "q": "Bieten Sie Sprachtraining an?", "a": "Ja. Deutsch, Japanisch, Französisch, Englisch, Skandinavisch und Balkan-Sprachen." },
+      { "q": "Ist Sprache für jede Stelle Pflicht?", "a": "Abhängig vom Land. Für Deutschland und Gesundheitsberufe ist Sprache verpflichtend." },
+      { "q": "Garantieren Sie Jobs oder Visa?", "a": "Nein. Auswahl basiert auf Arbeitgeberentscheidung und legalem Prozess." },
+      { "q": "Auf welche Branchen spezialisiert?", "a": "Produktion, Logistik, Bau, Pflege, Hospitality, Reinigung und technische Berufe." },
+      { "q": "Rekrutieren Sie qualifizierte und ungelernte Kräfte?", "a": "Ja. Fachkräfte, Hilfskräfte, White- & Blue-Collar." },
+      { "q": "Bieten Sie Masseneinstellungen an?", "a": "Ja. Projektbasierte & Massenrekrutierung." },
+      { "q": "Wie gewährleisten Sie Compliance?", "a": "Durch Lizenzierung, Dokumentenprüfung & rechtliche Verfahren." },
+      { "q": "Erheben Sie illegale Gebühren?", "a": "Nein. Null-Ausbeutungspolitik." },
+      { "q": "Können nur sprachtrainierte Kandidaten angefragt werden?", "a": "Ja." },
+      { "q": "Bieten Sie Healthcare-Recruiting an?", "a": "Ja, besonders für Deutschland & Japan." },
+      { "q": "Unterstützen Sie Dokumentationsprozesse?", "a": "Ja – gemäß den rechtlichen Anforderungen." },
+      { "q": "Wie lange dauert Rekrutierung?", "a": "Je nach Land, Rolle & Arbeitgeberprozess." },
+      { "q": "Bieten Sie Support nach Ankunft?", "a": "Ja – begrenzter Onboarding-Support." },
+      { "q": "Sind Kandidaten fachlich getestet?", "a": "Falls erforderlich – ja." },
+      { "q": "Rekrutieren Sie auch für Skandinavien?", "a": "Ja – abhängig von Nachfrage & Zulassung." },
+      { "q": "Wo befindet sich Ihr Hauptsitz?", "a": "Indien." },
+      { "q": "Warum FLP Overseas wählen?", "a": "Regierungslizenziert. Sprachvorbereitung. Ethik. Compliance." },
+      { "q": "Können Zertifikatsanforderungen erfüllt werden?", "a": "Ja – Skill- & Maschinentraining möglich." },
+      { "q": "Individuelle Trainingsprogramme verfügbar?", "a": "Ja – skill-, kultur- & sprachbezogen." },
+      { "q": "Unterstützen Sie langfristige Workforce-Planung?", "a": "Ja – Pipeline-Aufbau & gestaffelte Einsätze." },
+      { "q": "Arbeiten Sie mit ausländischen Agenturen?", "a": "Ja – Partnerschaften mit HR & Arbeitgebern weltweit." },
+      { "q": "Bauen Sie Trainingszentren für Arbeitgeber?", "a": "Ja – maßgeschneiderte Skill-Zentren möglich." },
+      { "q": "Rekrutieren Sie auch Berufsanfänger?", "a": "Ja – mit Trainingsprogramm." },
+      { "q": "Sind medizinische Checks inklusive?", "a": "Ja – gemäß Zielland-Standards." },
+      { "q": "Unterstützen Sie Anerkennung von Qualifikationen?", "a": "Ja – insbesondere für Deutschland." },
+      { "q": "Erfahrung im Gesundheitswesen?", "a": "Pflegekräfte, Seniorenbetreuung, Klinikunterstützung." },
+      { "q": "Können Arbeitgeber Interviews führen?", "a": "Ja – Online oder vor Ort." },
+      { "q": "Bieten Sie mehrsprachige Kandidaten?", "a": "Ja – Deutsch/Japanisch/Englisch & mehr." },
+      { "q": "Wie sichern Sie Mitarbeiterbindung?", "a": "Sprach- & Kulturtraining + SOP-Schulung." },
+      { "q": "Familiennachzug unterstützt?", "a": "Abhängig vom Visum – Beratung möglich." },
+      { "q": "Sind Verträge legal & transparent?", "a": "Ja – vollständig gesetzeskonform." },
+      { "q": "Saisonale und Festanstellung verfügbar?", "a": "Beides möglich." },
+      { "q": "Bieten Sie Ersatzkandidaten an?", "a": "Falls vertraglich definiert." },
+      { "q": "Post-Ankunft-Betreuung?", "a": "Ja – Basis-Integration & Begleitung." },
+      { "q": "Liefern Sie Vorarbeiter & Teamleiter?", "a": "Je nach Verfügbarkeit." },
+      { "q": "Rekrutieren Sie Frauen?", "a": "Ja – rollen- & branchengerecht." },
+      { "q": "Versicherung der Mitarbeiter?", "a": "Nach Landes- & Arbeitgeberregelung." },
+      { "q": "Rekrutieren Sie nur aus Indien?", "a": "Hauptsächlich Indien – weitere Regionen möglich." },
+      { "q": "Wie startet Zusammenarbeit?", "a": "Kontakt → Bedarf → Onboardingprozess." },
+      { "q": "Für KMU geeignet?", "a": "Ja – für kleine bis große Unternehmen." },
+      { "q": "Halten Sie internationale Arbeitsstandards ein?", "a": "Ja – ethische & rechtliche Compliance." },
+      { "q": "Kann Einstellung skaliert werden?", "a": "Ja – stufenweise Stellenbesetzung." },
+      { "q": "Mehrsprachige Dokumentation möglich?", "a": "Ja – falls benötigt." },
+      { "q": "Unterstützen Sie Regierungsprojekte?", "a": "Nach Prüfung & Zulassung." },
+      { "q": "Was unterscheidet FLP Overseas?", "a": "Ethik, Sprachtraining, Compliance, Qualität." },
+      { "q": "Kontakt zu FLP Overseas?", "a": "E-Mail: info@flpoverseas.com oder Website-Formular." }
+    ]
+  }
 }

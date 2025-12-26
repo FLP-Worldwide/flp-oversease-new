@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "about": "O nas",
+    "services": "Usługi",
+    "contact": "Kontakt",
+    "cta": "Umów rozmowę"
+  },
+
+  "hero": {
+    "title": "Wybierz jedną z najlepszych opcji rekrutacji pracowników krajowych i zagranicznych",
+    "titleAlt": "Rekrutacja pracowników krajowych i międzynarodowych w każdej branży – teraz w Twoich rękach",
+    "subtitle": "Współpracujemy z pracodawcami, agencjami, instytucjami i rządami, dostarczając przeszkoloną, gotową językowo i zgodną prawnie kadrę dla Europy, Japonii, krajów Zatoki oraz rynków globalnych.",
+    "primaryBtn": "Zbuduj z nami pipeline kadrowy",
+    "secondaryBtn": "Zatrudnij pracowników do Europy"
+  },
+
+  "about": {
+    "badge": "O nas",
+    "title": "Dlaczego globalni pracodawcy wybierają FLP Overseas",
+    "subtitle": "W obecnym rynku pracy rekrutacja międzynarodowa to nie tylko sourcing kandydatów – to redukcja ryzyka, pełna zgodność z prawem i stabilność zatrudnienia w długim terminie.",
+    "highlight": "FLP Overseas powstało właśnie w tym celu:",
+    "slogan": "Nie wysyłamy kandydatów – tworzymy rozwiązania kadrowe.",
+    "points": [
+      "Licencjonowana agencja przez rząd Indii i MEA",
+      "Legalne i zgodne procesy rekrutacji międzynarodowej",
+      "Przygotowanie kadr pod realne zapotrzebowanie rynku",
+      "Etyczna rekrutacja – polityka zero wyzysku",
+      "Skalowalne rozwiązania od MŚP po duże korporacje"
+    ]
+  },
+
+  "stats": {
+    "govt": "Zatwierdzone przez rząd Indii",
+    "license1": "Ministerstwo Spraw Korporacyjnych (Lic: U78100DL2023PTC421528)",
+    "license2": "Ministerstwo Spraw Zagranicznych (Lic: B-2268/DEL/COM/100/5/10739/2024)"
+  },
+
+  "services": {
+    "heading": "Poznaj nasze usługi",
+    "subheading": "Kompleksowe rozwiązania dla globalnej mobilności pracowników.",
+    "list": [
+      {
+        "title": "Gotowość pracownika, nie tylko rekrutacja",
+        "desc": "Nie wysyłamy przypadkowych kandydatów — przygotowujemy fachową, gotową do pracy kadrę."
+      },
+      {
+        "title": "Model językowo-kompetencyjny",
+        "desc": "Brak znajomości języka to główny powód rezygnacji — dlatego szkolimy językowo przed wyjazdem."
+      },
+      {
+        "title": "Ośrodki szkoleniowe oparte na zapotrzebowaniu",
+        "desc": "FLP wspiera pracodawców w tworzeniu ośrodków szkoleniowych oraz określaniu standardów kwalifikacyjnych."
+      }
+    ]
+  },
+
+  "industries": {
+    "list": [
+      { "title": "Produkcja i przemysł" },
+      { "title": "Logistyka, magazyny i łańcuch dostaw" },
+      { "title": "Budownictwo i infrastruktura" },
+      { "title": "Hotelarstwo i gastronomia" },
+      { "title": "Utrzymanie czystości i zarządzanie obiektami" },
+      { "title": "Technika i inżynieria" },
+      { "title": "Opieka zdrowotna i pielęgniarstwo" }
+    ]
+  },
+
+  "form": {
+    "heading": "Współpraca",
+    "subheading": "Zbuduj globalny zespół z FLP Overseas. Jeśli jesteś:",
+    "namePlaceholder": "Imię i nazwisko",
+    "emailPlaceholder": "Adres e-mail",
+    "phonePlaceholder": "Numer kontaktowy",
+    "fileLabel": "Dokument z wymaganiami",
+    "submitBtn": "Zadzwoń do mnie",
+    "tabCandidate": "Zatrudnij pracowników do Europy",
+    "tabEmployer": "Poproś o ofertę rekrutacyjną",
+    "messagePlaceholder": "Opisz swoje wymagania..."
+  },
+
+  "countries": [
+    "Niemcy",
+    "Austria",
+    "Szwajcaria",
+    "Holandia",
+    "Belgia",
+    "Francja",
+    "Włochy",
+    "Hiszpania",
+    "Polska",
+    "Czechy",
+    "Słowacja",
+    "Węgry",
+    "Rumunia",
+    "Bałkany",
+    "Skandynawia",
+    "Japonia",
+    "ZEA",
+    "Arabia Saudyjska",
+    "Katar",
+    "Kuwejt",
+    "Oman",
+    "Bahrajn"
+  ],
+
+  "faq": {
+    "title": "Najczęściej zadawane pytania",
+    "subtitle": "Odpowiedzi dotyczące rekrutacji, legalności, szkoleń i zatrudnienia",
+    "list": [
+      { "q": "Czy FLP Overseas jest zatwierdzone przez rząd?", "a": "Tak. FLP posiada licencję MEA oraz jest zarejestrowana w MCA rządu Indii." },
+      { "q": "Jaki jest Wasz numer licencji MEA?", "a": "B-3084/RAJ/COM/100/5/11092/2025" },
+      { "q": "Do jakich krajów rekrutujecie?", "a": "Europa, Japonia, kraje Zatoki i inne rynki międzynarodowe." },
+      { "q": "Czy oferujecie szkolenia językowe?", "a": "Tak — niemiecki, japoński, francuski, angielski, skandynawski i języki bałkańskie." },
+      { "q": "Czy znajomość języka jest obowiązkowa?", "a": "Zależy od kraju i stanowiska. W Niemczech i medycynie jest obowiązkowa." },
+      { "q": "Czy zapewniacie pracę lub wizę?", "a": "Nie. Ostateczna decyzja należy do pracodawcy i procesu prawnego." },
+      { "q": "W jakich branżach się specjalizujecie?", "a": "Produkcja, logistyka, budownictwo, hotelarstwo, opieka zdrowotna, sprzątanie, technika." },
+      { "q": "Czy rekrutujecie wykwalifikowanych i niewykwalifikowanych?", "a": "Tak — kadra white & blue collar." },
+      { "q": "Czy oferujecie rekrutację masową?", "a": "Tak — projekty i duże zapotrzebowanie." },
+      { "q": "Jak dbacie o zgodność prawną?", "a": "Licencjonowane działania, legalne procedury i pełna dokumentacja." },
+      { "q": "Czy pobieracie nielegalne opłaty?", "a": "Nie — polityka zero wyzysku." },
+      { "q": "Czy pracodawca może żądać kandydatów znających język?", "a": "Tak." },
+      { "q": "Czy rekrutujecie w sektorze medycznym?", "a": "Tak — szczególnie dla Niemiec i Japonii." },
+      { "q": "Czy pomagacie w dokumentach?", "a": "Tak zgodnie z wymaganiami prawnymi." },
+      { "q": "Ile trwa proces rekrutacji?", "a": "Zależy od kraju, stanowiska i pracodawcy." },
+      { "q": "Czy oferujecie wsparcie po przyjeździe?", "a": "Tak — ograniczone wsparcie onboardingowe." },
+      { "q": "Czy kandydaci są testowani zawodowo?", "a": "Tak — gdy jest to wymagane." },
+      { "q": "Czy rekrutujecie do krajów skandynawskich?", "a": "Tak, jeśli jest zapotrzebowanie." },
+      { "q": "Gdzie mieści się główna siedziba?", "a": "Indie." },
+      { "q": "Dlaczego warto wybrać FLP Overseas?", "a": "Licencje, szkolenie językowe, etyka i legalność." },
+      { "q": "Czy pomagacie zdobyć certyfikacje zawodowe?", "a": "Tak — szkolenia i certyfikaty na życzenie." },
+      { "q": "Czy szkolenie można dopasować indywidualnie?", "a": "Tak — językowe, kulturowe i kompetencyjne." },
+      { "q": "Czy wspieracie planowanie kadrowe?", "a": "Tak — system pipeline i wdrożenia etapowe." },
+      { "q": "Czy pracujecie z zagranicznymi agencjami?", "a": "Tak — partnerstwa z HR na świecie." },
+      { "q": "Czy tworzycie centra szkoleniowe?", "a": "Tak — dedykowane dla pracodawców." },
+      { "q": "Czy zatrudniacie świeżych absolwentów?", "a": "Tak — po szkoleniach." },
+      { "q": "Czy kandydaci przechodzą badania medyczne?", "a": "Tak — zgodnie z wymogami kraju docelowego." },
+      { "q": "Czy pomagacie w uznaniu kwalifikacji?", "a": "Tak — szczególnie w Niemczech." },
+      { "q": "Doświadczenie w medycynie?", "a": "Pielęgniarstwo, opieka senioralna, wsparcie medyczne." },
+      { "q": "Czy pracodawca może przeprowadzić rozmowę?", "a": "Tak — online lub stacjonarnie." },
+      { "q": "Czy oferujecie kandydatów wielojęzycznych?", "a": "Tak — niemiecki, japoński, angielski i inne." },
+      { "q": "Jak zapewniacie retencję pracowników?", "a": "Szkolenie językowe, kulturowe i SOP pracodawcy." },
+      { "q": "Czy wspieracie łączenie rodzin?", "a": "Zależnie od rodzaju wizy." },
+      { "q": "Czy umowy są legalne i przejrzyste?", "a": "Tak — pełna zgodność z prawem." },
+      { "q": "Czy oferujecie pracę tymczasową i stałą?", "a": "Tak — obie opcje." },
+      { "q": "Czy oferujecie zastępstwa?", "a": "Zależnie od warunków umowy." },
+      { "q": "Czy jest wsparcie po przyjeździe?", "a": "Tak — bazowe wdrożenie." },
+      { "q": "Czy dostarczacie brygadzistów/kierowników?", "a": "Tak, zależnie od dostępności." },
+      { "q": "Czy zatrudniacie kobiety?", "a": "Tak — jeśli stanowisko pozwala." },
+      { "q": "Czy pracownicy są ubezpieczeni?", "a": "Zgodnie z przepisami kraju/firmy." },
+      { "q": "Czy rekrutujecie tylko z Indii?", "a": "Głównie Indie — możliwe inne kraje." },
+      { "q": "Jak rozpocząć współpracę?", "a": "Kontakt → analiza potrzeb → proces wdrożenia." },
+      { "q": "Czy współpracujecie z MŚP?", "a": "Tak — również z dużymi firmami." },
+      { "q": "Czy spełniacie standardy międzynarodowe?", "a": "Tak — etyczna i legalna rekrutacja." },
+      { "q": "Czy można skalować zatrudnienie stopniowo?", "a": "Tak — wdrożenia w fazach." },
+      { "q": "Czy dostępna jest dokumentacja w wielu językach?", "a": "Tak, jeśli wymagane." },
+      { "q": "Czy wspieracie projekty rządowe?", "a": "Tak — po zatwierdzeniu." },
+      { "q": "Co wyróżnia FLP Overseas?", "a": "Etyka, szkolenia językowe, legalność i jakość." },
+      { "q": "Jak skontaktować się z FLP Overseas?", "a": "Email: info@flpoverseas.com lub formularz kontaktowy." }
+    ]
+  }
+}

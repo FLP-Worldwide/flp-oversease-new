@@ -13,11 +13,9 @@ export default function Hero({ t }) {
 
 const titles = [
   [
-    { text: 'Reliable Workforce Recruitment for', highlight: false },
-    { text: 'German', highlight: false },
-    { text: 'and', highlight: false },
-    { text: 'European Employers', highlight: true },
-    { text: 'Skilled & Blue-Collar Talent', highlight: false },
+    { text: 'Global Workforce Solutions Built on', highlight: false },
+    { text: ' Trust,', highlight: true },
+    { text: 'Compliance & Capability', highlight: false },
 
   ],
   // [
@@ -63,7 +61,7 @@ const titles = [
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100/50 rounded-full border border-blue-200">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
             <span className="text-blue-800 text-xs font-bold uppercase tracking-wider">
-              Hiring Now For Germany & European Employers
+              Global Workforce Solutions Built on Trust, Compliance & Capability
             </span>
           </div>
 
@@ -151,7 +149,7 @@ const titles = [
      <EnquiryModal
   open={open}
   onClose={() => setOpen(false)}
-  source="partner"
+  source="callback"
 />
     </section>
   );

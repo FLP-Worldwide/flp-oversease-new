@@ -21,25 +21,42 @@ export default function Features({ t }) {
     Building2
   ];
 
-  const INDUSTRY_ICONS = [
-    Stethoscope,
-    Anchor,
-    HardHat,
-    Globe2,
-    HardHat,
-    Globe2
-  ];
+  
 
   const INDUSTRY_IMAGES = [
-    'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600',
     'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=600',
     'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=600',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMPgFWzSZNYGZnNgqe2rcIQ2PBpPPg4Icudw&s',
-    'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=600',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMPgFWzSZNYGZnNgqe2rcIQ2PBpPPg4Icudw&s'
+    'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600',
+    'https://www.pritchardindustries.com/wp-content/uploads/2023/02/4d8c46_e0f63c3f8c29461db29dcb4cab1c6cf2_mv2.jpg',
+    'https://newsmedia.tasnimnews.com/Tasnim/Uploaded/Image/1402/11/04/1402110409494713929249824.jpg',
+    'https://careoptionsforkids.com/wp-content/uploads/2025/04/What-is-it-Like-Being-a-Home-Healthcare.jpg'
   ];
 
-const COUNTRY_FLAGS = ['🇩🇪', '🇪🇸', '🇵🇱', '🇫🇷', '🇮🇹', '🇳🇱', '🇧🇪'];
+const COUNTRY_FLAGS = [
+  "🇩🇪", // Germany
+  "🇦🇹", // Austria
+  "🇨🇭", // Switzerland
+  "🇳🇱", // Netherlands
+  "🇧🇪", // Belgium
+  "🇫🇷", // France
+  "🇮🇹", // Italy
+  "🇪🇸", // Spain
+  "🇵🇱", // Poland
+  "🇨🇿", // Czech Republic
+  "🇸🇰", // Slovakia
+  "🇭🇺", // Hungary
+  "🇷🇴", // Romania
+  "🇧🇬", // Balkans (closest flag Bulgaria/Serbia – choose one)
+  "🇸🇪", // Scandinavia (Sweden as representative)
+  "🇯🇵", // Japan
+  "🇦🇪", // UAE
+  "🇸🇦", // Saudi Arabia
+  "🇶🇦", // Qatar
+  "🇰🇼", // Kuwait
+  "🇴🇲", // Oman
+  "🇧🇭", // Bahrain
+];
 
 
   return (
@@ -49,14 +66,14 @@ const COUNTRY_FLAGS = ['🇩🇪', '🇪🇸', '🇵🇱', '🇫🇷', '🇮🇹
       <section id="services" className="pt-24 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-blue-500 font-semibold tracking-wider uppercase text-sm mb-3">
-            What We Offer
+            WHAT MAKES FLP A MARKET LEADER
           </h2>
           <h3 className="text-3xl md:text-5xl font-bold text-blue-950">
             {t.services.heading}
           </h3>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {t.services.list.map((service, index) => {
             const Icon = SERVICES_ICONS[index];
             return (
@@ -101,33 +118,32 @@ const COUNTRY_FLAGS = ['🇩🇪', '🇪🇸', '🇵🇱', '🇫🇷', '🇮🇹
           </a>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-4 h-[500px]">
+      <div className="grid md:grid-cols-4 gap-3 auto-rows-[250px] md:auto-rows-[320px]">
+
           {t.industries.list.map((ind, i) => {
-            const Icon = INDUSTRY_ICONS[i];
+
             return (
               <div
-                key={i}
-                className={`relative rounded-3xl overflow-hidden group ${
-                  i === 0 || i === 3 ? 'md:col-span-2' : ''
-                }`}
-              >
-                <img
-                  src={INDUSTRY_IMAGES[i]}
-                  alt={ind.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+              key={i}
+              className={`relative rounded-3xl overflow-hidden group 
+                ${i === 0 || i === 3 ? 'md:col-span-2' : ''} 
+                h-64 md:h-72  // <-- add height (adjust as you like)
+              `}
+            >
+              <img
+                src={INDUSTRY_IMAGES[i]}
+                alt={ind.title}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                <div className="absolute bottom-0 left-0 p-8 w-full">
-                  <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-white mb-4 border border-white/10">
-                    <Icon size={24} />
-                  </div>
-                  <h4 className="text-2xl font-bold text-white">
-                    {ind.title}
-                  </h4>
-                </div>
+              <div className="absolute bottom-0 left-0 p-8 w-full">
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-white mb-4 border border-white/10"></div>
+                <h4 className="text-2xl font-bold text-white">{ind.title}</h4>
               </div>
+            </div>
+
             );
           })}
         </div>
@@ -135,24 +151,25 @@ const COUNTRY_FLAGS = ['🇩🇪', '🇪🇸', '🇵🇱', '🇫🇷', '🇮🇹
 
       {/* Global Reach */}
       <section className="pt-24 px-6 max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-blue-950 mb-12">
-          We Specialize in International Recruitment
-        </h2>
+  <h2 className="text-3xl font-bold text-blue-950 mb-12">
+    GLOBAL MARKETS WE SERVE
+  </h2>
 
-        <div className="flex flex-wrap justify-center gap-6">
-          {t.countries.map((name, i) => (
-            <div
-              key={i}
-              className="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all min-w-[140px]"
-            >
-              <span className="text-5xl">{COUNTRY_FLAGS[i]}</span>
-              <span className="font-bold text-gray-700 text-sm">
-                {name}
-              </span>
-            </div>
-          ))}
-        </div>
-      </section>
+  <div className="flex flex-wrap justify-center gap-6">
+    {t.countries.map((name, i) => (
+      <div
+        key={i}
+        className="flex flex-col items-center gap-3 p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all min-w-[140px]"
+      >
+        <span className="text-5xl">{COUNTRY_FLAGS[i]}</span>
+        <span className="font-bold text-gray-700 text-sm">
+          {name}
+        </span>
+      </div>
+    ))}
+  </div>
+</section>
+
     </div>
   );
 }

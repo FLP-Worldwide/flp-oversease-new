@@ -1,4 +1,4 @@
-export const locales = ['en','de'];
+export const locales = ['en','de','es','pl'];
 export const defaultLocale = 'en';
 
 export function getMessages(locale) {
