@@ -17,7 +17,7 @@ export default function Footer() {
         <div>
           <div className="w-60 h-15 rounded-xl flex items-center overflow-hidden">
             <Image
-              src={'/images/logo1.png'}
+              src={'/images/logo-w.png'}
               alt="FLP Overseas Logo"
               width={220}
               height={40}
@@ -26,8 +26,8 @@ export default function Footer() {
             />
           </div>
           <p className="text-blue-50 text-sm leading-relaxed mt-3">
-            This is not recruitment as usual. <br/>
-            This is workforce engineering for global industries.
+            FLP Overseas is a Government of India–authorized overseas recruitment organization, licensed by the Ministry of External Affairs (MEA) and registered with the Ministry of Corporate Affairs (MCA). Recruiting Agent License: B-3084/RAJ/COM/100/5/11092/2025 | CIN: U80100RJ2023PTC091520 | Ethical, zero-exploitation recruitment.
+Recruitment is subject to employer selection and legal approvals.
           </p>
         </div>
 

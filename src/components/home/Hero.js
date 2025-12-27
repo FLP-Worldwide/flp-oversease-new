@@ -4,12 +4,12 @@ import React, { useEffect, useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import EnquiryModal from '@/components/ui/EnquiryModal';
 import HeroBenefits from './HeroBenefits';
-
+import { usePathname, useRouter } from 'next/navigation';
 export default function Hero({ t }) {
   const [open, setOpen] = useState(false);
-
+const pathname = usePathname();
+const locale = pathname.split('/')[1];
   /* ---------------- HERO TITLE FADE SLIDER ---------------- */
-
 
 const titles = [
   [
@@ -49,7 +49,7 @@ const titles = [
   /* ------------------------------------------------------- */
 
   return (
-    <section id="home" className="bg-white relative pt-32 pb-20 px-6 overflow-hidden">
+    <section id="home" className="bg-white relative pt-10 pb-10 px-6 overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-50/50 -z-10 rounded-bl-[100px]" />
 
@@ -61,13 +61,13 @@ const titles = [
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100/50 rounded-full border border-blue-200">
             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
             <span className="text-blue-800 text-xs font-bold uppercase tracking-wider">
-              Global Workforce Solutions Built on Trust, Compliance & Capability
+              Why FLP Overseas?
             </span>
           </div>
 
           {/* HERO TITLE (FADE SLIDER) */}
          <h1
-            className={`min-h-[130px] text-5xl lg:text-4xl font-bold
+            className={`min-h-[50px] text-5xl lg:text-5xl font-bold
               text-blue-950 leading-[1.1]
               transition-opacity duration-500
               ${fade ? 'opacity-100' : 'opacity-0'}`}
@@ -84,7 +84,7 @@ const titles = [
 
 
           {/* SUBTITLE */}
-          <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-2xl leading-relaxed">
             {t.hero.subtitle}
           </p>
 
@@ -92,8 +92,8 @@ const titles = [
           <div className="flex flex-wrap gap-4">
             <button
               onClick={() => setOpen(true)}
-              className="px-8 py-4 bg-blue-950 text-white font-semibold
-              rounded-full hover:bg-blue-900 transition-all
+              className="px-8 py-3 bg-blue-950 text-white 
+              rounded-full hover:bg-blue-900 transition-all text-sm
               flex items-center gap-2 group
               shadow-lg shadow-blue-900/20"
             >
@@ -103,6 +103,20 @@ const titles = [
                 className="group-hover:translate-x-1 transition-transform"
               />
             </button>
+            <a href={`/${locale}/jobs`} target="_blank" rel="noopener noreferrer">
+            <button
+              
+             className="px-8 py-2 border border-blue-950 text-blue-950 
+              rounded-full hover:bg-blue-900 hover:text-white transition-all text-sm
+              flex items-center gap-2 group
+              shadow-lg shadow-blue-900/20"
+            >
+              {t.hero.secondaryBtn}
+              <ArrowRight
+                size={18}
+                className="group-hover:translate-x-1 transition-transform"
+              />
+            </button></a>
           </div>
 
           {/* BENEFITS */}
@@ -111,7 +125,7 @@ const titles = [
 
         {/* RIGHT IMAGE */}
         <div className="relative">
-          <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative z-10">
+          <div className="aspect-[4/5] rounded-xl overflow-hidden shadow-xl relative z-10">
             <img
               src="https://thermalprocessing.com/wp-content/uploads/2021/11/TP-2021-12-Feat-3-women.jpg"
               alt="Industrial Worker"

@@ -40,7 +40,7 @@ export default function Header({ currentLang, t }) {
     <nav className="bg-white fixed top-0 left-0 w-full z-50 ">
 
       {/* Announcement */}
-      <AnnouncementBar isScrolled={isScrolled} />
+      <AnnouncementBar isScrolled={isScrolled} currentLang={locale} t={t}/>
 
       {/* Header */}
       <div
@@ -50,13 +50,13 @@ export default function Header({ currentLang, t }) {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-6 py-1 flex justify-between items-center">
 
           <NavLink href={`/${locale}/`}>
           <Image
-            src={isScrolled ? '/images/logo1.png' : '/images/logo.svg'}
+            src={isScrolled ? '/images/new.png' : '/images/new1.png'}
             alt="FLP Overseas Logo"
-            width={220}
+            width={200}
             height={40}
             className="object-contain"
             priority
@@ -65,6 +65,9 @@ export default function Header({ currentLang, t }) {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             <NavLink href={`/${locale}/`} isScrolled={isScrolled}>{t.nav.home}</NavLink>
+
+            <NavLink href={`/${locale}/`} isScrolled={isScrolled}>{t.nav.WorkforceReadiness}</NavLink>
+            
             <a className={`hover:text-blue-400 ${isScrolled ? 'text-gray-200' : 'text-blue-900'}`}  href={`/${locale}#about`}>
               {t.nav.about}
             </a>

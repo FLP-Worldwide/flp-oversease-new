@@ -10,6 +10,7 @@ import FaqSection from '@/components/layout/FaqSection';
 import HeroSection from '@/components/home/HeroSection';
 import ResumeBuilderSection from '@/components/home/ResumeBuilderSection';
 import BlogGrid from '@/components/home/BlogSection';
+import CountriesWeServe from '@/components/home/CountriesWeServe';
 export const dynamic = "force-dynamic";
 
 export default async function Page({ params }) {
@@ -29,6 +30,7 @@ export default async function Page({ params }) {
       <LicensesSection t={t} />
       <AboutSection t={t} />
       <Features t={t} />
+      <CountriesWeServe />
       <ResumeBuilderSection />
       <ContactForm t={t} />
       <FaqSection />

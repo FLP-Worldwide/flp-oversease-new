@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react';
 import NavLink from '../ui/NavLink';
 import { usePathname } from 'next/navigation';
 
-export default function AnnouncementBar({ isScrolled }) {
+export default function AnnouncementBar({ isScrolled,currentLang, t }) {
 
   const pathname = usePathname();
-  const locale = pathname.split('/')[1] || 'en';
+  const locale = pathname.split('/')[1] || currentLang;
 
   const messages = [
     '🇪🇺 Hiring for Germany, Poland & Europe – Apply Now',
@@ -66,6 +66,15 @@ export default function AnnouncementBar({ isScrolled }) {
           >
             Employers
           </NavLink>
+          <span className="opacity-50">|</span>
+          <NavLink href={`/${locale}/`} isScrolled={isScrolled} className={`hover:underline 
+            ${isScrolled ? 'text-slate-900' : 'text-white'}
+            `}
+            >{t.nav.Industries}</NavLink>
+<span className="opacity-50">|</span>
+            <NavLink href={`/${locale}/contact`} isScrolled={isScrolled} className={`hover:underline 
+            ${isScrolled ? 'text-slate-900' : 'text-white'}
+            `}>{t.nav.faq}</NavLink>
 
           <NavLink href={`https://flpworldwide.com`} isScrolled={isScrolled} 
           className={`hover:underline 

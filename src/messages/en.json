@@ -1,31 +1,34 @@
 {
   "nav": {
     "home": "Home",
-    "about": "About Us",
+    "about": "About & Compliance",
     "services": "Services",
     "contact": "Contact",
-    "cta": "Book a Call"
+    "faq": "FAQs",
+    "cta": "Book a Call",
+    "Employers": "Employers",
+    "WorkforceReadiness": "Workforce Readiness",
+    "Industries": "Industries"
   },
 
 "hero": {
-  "title": "Choose now one of the best solutions for recruiting domestic and international workers",
+  "title": "Global Workforce Solutions Built on Trust, Compliance & Capability",
   "titleAlt": "Recruitment of domestic and international workers in all fields now in your fingertips",
-  "subtitle": "We partner with employers, staffing companies, institutions, and governments to deliver custom-trained, language-ready, and legally compliant manpower for Europe, Japan, the Gulf, and global markets.",
+  "subtitle": "FLP Overseas delivers demand-ready, language-trained, and fully compliant international manpower for Europe, Japan, the Gulf, and global markets. Government of India–approved overseas recruitment organization | MEA Licensed Recruiting Agent | Ethical, zero-exploitation hiring practices",
   "primaryBtn": "Build a Workforce Pipeline With Us",
-  "secondaryBtn": "Hire Manpower for Europe"
+  "secondaryBtn": "Apply for Overseas Jobs"
 },
 "about": {
-  "badge": "About Us",
-  "title": "Why Global Employers Choose FLP Overseas",
-  "subtitle": "In today’s labor market, hiring internationally is no longer about sourcing candidates. It is about reducing risk, ensuring compliance, and securing long-term workforce stability. ",
+  "badge": "Who We Are",
+  "title": "Not Just Recruitment. Workforce Engineering.",
+  "subtitle": "FLP Overseas is a Government of India–approved overseas recruitment and workforce mobility organization operating under the FLP Worldwide Group. We deliver skilled, semi-skilled, and general workforce that is trained, documented, and deployment ready. ",
   "highlight":"FLP Overseas is built precisely for that purpose:",
   "slogan":"We do not push candidates. We build workforce solutions.",
   "points": [
-    "Government of India & MEA licensed recruitment agency",
-    "Legally compliant international hiring processes",
-    "Demand-driven manpower preparation",
-    "Ethical recruitment with zero-exploitation policy",
-    "Scalable solutions for SMEs to large enterprises"
+    "White-collar & Blue-collar hiring",
+    "Skill + language + compliance in one system",
+    "Employers receive productive manpower from Day One",
+    "Candidates access ethical, sustainable global careers"
   ]
 }
 ,

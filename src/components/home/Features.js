@@ -2,15 +2,51 @@
 
 import React from 'react';
 import {
-  Users,
-  GraduationCap,
+
+
   Briefcase,
   Building2,
   Stethoscope,
   Anchor,
   HardHat,
-  Globe2
+  Globe2, Users, Settings, Languages, FileCheck, Plane, GraduationCap, ClipboardList 
 } from 'lucide-react';
+import LanguageWorkforceReadiness from './LanguageWorkforceReadiness';
+
+const PROCESS_STEPS = [
+  {
+    title: "Employer requirement analysis",
+    img: "https://uptc.com.br/wp-content/uploads/2017/09/Reuni%C3%B5es-Efetivas.jpg"
+  },
+  {
+    title: "Candidate sourcing & screening",
+    img: "https://civicminds.com/wp-content/uploads/2019/01/Candidate-Screening-Process-1.png"
+  },
+  {
+    title: "Skill & trade assessment",
+    img: "https://www.vetassess.com.au/sites/default/files/images/rpl_1_c_0.jpg"
+  },
+  {
+    title: "Language training (if required)",
+    img: "https://www.fita.in/wp-content/uploads/2022/03/Marathahalli-website-image-3.jpg"
+  },
+  {
+    title: "Compliance & documentation",
+    img: "https://www.tortechnologies.com/wp-content/uploads/2021/03/why-regulatory-compliance-documentation-is-important.jpg"
+  },
+  {
+    title: "Visa coordination support",
+    img: "https://www.joinincampus.com/assets/images/web/visa-assistance-thumb.png"
+  },
+  {
+    title: "Pre-departure orientation",
+    img: "https://skillupglobal.com/wp-content/uploads/2024/10/AdobeStock_224521180_result-scaled.webp"
+  },
+  {
+    title: "Deployment & onboarding",
+    img: "https://www.schneider.im/media/2025/01/SCHNEIDER-IT-MANAGEMENT-2025-01-20-Website-Microsoft-Onboarding-Services-2.jpg"
+  }
+];
 
 export default function Features({ t }) {
   /* Icons are UI concern, NOT translations */
@@ -60,43 +96,76 @@ const COUNTRY_FLAGS = [
 
 
   return (
-    <div className="bg-white rounded-t-[50px] -mt-10 relative z-20 pb-20">
+    <div className="bg-white rounded-t-[50px]  relative z-20 ">
       
-      {/* Services Section */}
-      <section id="services" className="pt-24 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-blue-500 font-semibold tracking-wider uppercase text-sm mb-3">
-            WHAT MAKES FLP A MARKET LEADER
-          </h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-blue-950">
-            {t.services.heading}
-          </h3>
-        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {t.services.list.map((service, index) => {
-            const Icon = SERVICES_ICONS[index];
-            return (
-              <div
-                key={index}
-                className="p-8 rounded-3xl bg-gray-50 hover:bg-blue-950 group transition-all duration-300 border border-gray-100 hover:shadow-2xl"
-              >
-                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 text-blue-600 shadow-sm group-hover:bg-blue-500 group-hover:text-white transition-colors">
-                  <Icon size={28} />
-                </div>
+      <section className="bg-[#F5F7FD] py-24 px-6 w-full">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
-                <h4 className="text-xl font-bold text-blue-950 group-hover:text-white mb-3">
-                  {service.title}
-                </h4>
+          {/* LEFT TEXT BLOCK */}
+          <div>
+            {/* Top Highlight Line Text */}
+            <p className="text-[18px] font-medium text-blue-700 tracking-wide relative pb-4">
+              Why Global Employers Choose FLP Overseas
+              <span className="block w-[120px] h-[2px] bg-blue-700/50 mt-2"></span>
+            </p>
 
-                <p className="text-gray-500 group-hover:text-blue-100/80 leading-relaxed text-sm">
-                  {service.desc}
-                </p>
-              </div>
-            );
-          })}
+            {/* Main Heading */}
+            <h2 className="text-[30px] md:text-[42px] leading-tight font-bold text-[#1B2233]">
+              We do not push candidates, <br />We deliver workforce solutions.
+            </h2>
+          </div>
+
+          {/* RIGHT TEXT BLOCK */}
+          <div className="flex flex-col">
+            <p className="text-[22px] md:text-[26px] text-[#1B2233] leading-snug font-medium">
+              Government-authorized recruitment, <br />End-to-end workforce lifecycle management<br />
+              Language-integrated recruitment model, <br />Demand-based skill training, <br />Zero-exploitation policy
+            </p>
+
+            <span className="block w-[120px] h-[2px] bg-blue-700/50 mt-4"></span>
+          </div>
         </div>
       </section>
+
+
+      {/* Services Section */}
+      <section className="py-20 px-6 bg-gray-50">
+      <div className="max-w-7xl mx-auto text-center mb-12">
+        <h3 className="text-blue-500 font-semibold uppercase tracking-wider text-sm">
+          Section 5 — What We Do
+        </h3>
+        <h2 className="text-3xl md:text-5xl font-bold text-blue-950 mt-2">
+          End-To-End Workforce Deployment Process
+        </h2>
+      </div>
+
+      <div className="grid md:grid-cols-4 gap-6">
+        {PROCESS_STEPS.map((item, i) => (
+          <div
+            key={i}
+            className="relative group h-60 rounded-lg overflow-hidden shadow-lg  hover:shadow-2xl transition-all duration-300"
+          >
+            {/* Background image */}
+            <img
+              src={item.img}
+              alt={item.title}
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60" />
+
+            {/* Text */}
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <p className="font-semibold text-lg leading-snug drop-shadow-lg">
+                {i + 1}) {item.title}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
 
       {/* Industries Section */}
       <section className="pt-24 px-6 max-w-7xl mx-auto">
@@ -118,7 +187,7 @@ const COUNTRY_FLAGS = [
           </a>
         </div>
 
-      <div className="grid md:grid-cols-4 gap-3 auto-rows-[250px] md:auto-rows-[320px]">
+        <div className="grid md:grid-cols-4 gap-3 auto-rows-[250px] md:auto-rows-[320px]">
 
           {t.industries.list.map((ind, i) => {
 
@@ -139,7 +208,7 @@ const COUNTRY_FLAGS = [
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
               <div className="absolute bottom-0 left-0 p-8 w-full">
-                <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-white mb-4 border border-white/10"></div>
+                {/* <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center text-white mb-4 border border-white/10"></div> */}
                 <h4 className="text-2xl font-bold text-white">{ind.title}</h4>
               </div>
             </div>
@@ -149,8 +218,10 @@ const COUNTRY_FLAGS = [
         </div>
       </section>
 
+<LanguageWorkforceReadiness />
+
       {/* Global Reach */}
-      <section className="pt-24 px-6 max-w-7xl mx-auto text-center">
+      {/* <section className="pt-24 px-6 max-w-7xl mx-auto text-center">
   <h2 className="text-3xl font-bold text-blue-950 mb-12">
     GLOBAL MARKETS WE SERVE
   </h2>
@@ -168,7 +239,7 @@ const COUNTRY_FLAGS = [
       </div>
     ))}
   </div>
-</section>
+</section> */}
 
     </div>
   );

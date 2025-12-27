@@ -5,7 +5,7 @@ import { ShieldCheck, BadgeCheck, FileCheck } from 'lucide-react';
 
 export default function LicensesSection({ t }) {
   return (
-    <section className="relative py-20 px-6 bg-white">
+    <section className="relative py-20 px-6 bg-[#F5F7FD]">
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
@@ -23,7 +23,7 @@ export default function LicensesSection({ t }) {
         <div className="grid md:grid-cols-3 gap-8">
 
           {/* Govt Approved */}
-          <div className="p-8 rounded-[32px] border border-gray-100 shadow-sm hover:shadow-lg transition-all bg-blue-50/40">
+          <div className="p-8 rounded-[32px] border border-gray-100 shadow-sm hover:shadow-lg transition-all bg-white">
             <ShieldCheck className="text-blue-500 mb-4" size={36} />
             <h3 className="text-lg font-bold text-blue-950 mb-2">
               {t.stats.govt}
