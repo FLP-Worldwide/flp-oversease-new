@@ -130,14 +130,61 @@ export default function Header({ currentLang, t }) {
         </div>
 
         {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t p-6 space-y-4 shadow-xl">
-            <a href="#home">{t.nav.home}</a>
-            <a href="#about">{t.nav.about}</a>
-            <a href="#services">{t.nav.services}</a>
-            <a href="#contact">{t.nav.contact}</a>
-          </div>
-        )}
+        {/* Mobile Menu */}
+          {mobileMenuOpen && (
+            <div className="md:hidden bg-white border-t shadow-xl px-6 py-6 space-y-5 animate-slideDown">
+
+              <a
+                href={`/${locale}/`}
+                className="block text-blue-900 font-medium hover:text-blue-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t.nav.home}
+              </a>
+
+              <a
+                href={`/${locale}/`}
+                className="block text-blue-900 font-medium hover:text-blue-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t.nav.WorkforceReadiness}
+              </a>
+
+              <a
+                href={`/${locale}#about`}
+                className="block text-blue-900 font-medium hover:text-blue-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t.nav.about}
+              </a>
+
+              <a
+                href={`/${locale}#services`}
+                className="block text-blue-900 font-medium hover:text-blue-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t.nav.services}
+              </a>
+
+              <a
+                href={`/${locale}/contact`}
+                className="block text-blue-900 font-medium hover:text-blue-600"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t.nav.contact}
+              </a>
+
+              {/* CTA Button Like Desktop */}
+              <a
+                href={`/${locale}/contact`}
+                className="block mt-4 text-center bg-blue-600 text-white font-semibold py-2.5 rounded-full hover:bg-blue-500 transition"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {t.nav.cta}
+              </a>
+            </div>
+          )}
+
       </div>
     </nav>
   );
