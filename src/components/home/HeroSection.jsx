@@ -13,7 +13,7 @@ export default function HeroSection() {
     >
 
   <video
-    src="/images/header.mp4"          // <-- your video file path here
+    src="/images/header1.mp4"          // <-- your video file path here
     autoPlay
     loop
     muted
