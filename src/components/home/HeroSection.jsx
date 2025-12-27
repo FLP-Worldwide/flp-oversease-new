@@ -8,18 +8,28 @@ export default function HeroSection() {
 
     <>
    <section
-  id="home"
-  className="relative w-full min-h-[90vh] flex items-center overflow-hidden"
->
-  {/* Background Image */}
-  <img
-    src="https://images.unsplash.com/photo-1759763823587-c8bd07fca246?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    alt="Global Workforce Recruitment"
+      id="home"
+      className="relative w-full min-h-[90vh] flex items-center overflow-hidden"
+    >
+
+  <video
+    src="/images/header.mp4"          // <-- your video file path here
+    autoPlay
+    loop
+    muted
+    playsInline
     className="absolute inset-0 w-full h-full object-cover"
   />
 
+  {/* Background Image */}
+  {/* <img
+    src="https://images.unsplash.com/photo-1758874384232-cfa79a5babf1?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    alt="Global Workforce Recruitment"
+    className="absolute inset-0 w-full h-full object-cover"
+  /> */}
+
   {/* Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/90 via-blue-900/70 to-blue-900/30" />
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/50 via-blue-900/30 to-transparent" />
 
   {/* Content */}
   <div className="relative z-10 w-full flex items-center pt-[140px] md:pt-[180px] pb-10">

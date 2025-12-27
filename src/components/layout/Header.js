@@ -40,7 +40,7 @@ export default function Header({ currentLang, t }) {
     <nav className="bg-white fixed top-0 left-0 w-full z-50 ">
 
       {/* Announcement */}
-      <AnnouncementBar isScrolled={isScrolled} currentLang={locale} t={t}/>
+      {/* <AnnouncementBar isScrolled={isScrolled} currentLang={locale} t={t}/> */}
 
       {/* Header */}
       <div
