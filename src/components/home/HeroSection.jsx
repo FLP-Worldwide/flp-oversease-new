@@ -53,7 +53,7 @@ export default function HeroSection() {
       <p className="text-sm sm:text-base md:text-lg text-white max-w-3xl mx-auto">
         FLP Overseas is a Government of India–approved overseas recruitment and workforce solutions organization,
         operating under the FLP Worldwide Group
-        <a href="https://flpworldwide.com/" target="_blank" className="underline ml-1">
+        <a href="https://flpworldwide.com/" target="_blank" className="ml-1">
           FLP Global Service Private Limited
         </a>.
       </p>
