@@ -9,7 +9,7 @@ export default function HeroSection() {
     <>
    <section
       id="home"
-      className="relative w-full min-h-[90vh] flex items-center overflow-hidden"
+      className="relative w-full min-h-[95vh] flex items-center overflow-hidden"
     >
 
   <video
