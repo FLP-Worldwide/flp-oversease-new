@@ -39,7 +39,7 @@ export default function HeroSection() {
       <div className="inline-flex items-center gap-2 px-4 py-1.5
         bg-white/10 backdrop-blur-md rounded-full border border-white/20">
         <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
-        <span className="text-[10px] md:text-xs uppercase tracking-wider text-white font-semibold">
+        <span className="text-[12px] md:text-sm uppercase tracking-wider text-white font-semibold">
           Your Global Workforce Partner
         </span>
       </div>
@@ -50,7 +50,7 @@ export default function HeroSection() {
       </h1>
 
       {/* Subtitle */}
-      <p className="text-sm sm:text-base md:text-lg text-white max-w-3xl mx-auto">
+      <p className="text-sm sm:text-base md:text-lg font-bold  text-white max-w-3xl mx-auto">
         FLP Overseas is a Government of India–approved overseas recruitment and workforce solutions organization,
         operating under the FLP Worldwide Group
         <a href="https://flpworldwide.com/" target="_blank" className="ml-1">

@@ -21,7 +21,7 @@ export default function Header({ currentLang, t }) {
     { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
     { code: 'es', label: 'Español', flag: '🇪🇸' },
     { code: 'pl', label: 'Polski', flag: '🇵🇱' },
-    { code: 'dk', label: 'Polski', flag: '🇵🇱' },
+
   ];
 
   useEffect(() => {
@@ -66,9 +66,9 @@ export default function Header({ currentLang, t }) {
           <div className="hidden md:flex items-center gap-8">
             <NavLink href={`/${locale}/`} isScrolled={isScrolled}>{t.nav.home}</NavLink>
 
-            <NavLink href={`/${locale}/`} isScrolled={isScrolled}>{t.nav.WorkforceReadiness}</NavLink>
+            <NavLink href={`/${locale}/workforce-readiness`} isScrolled={isScrolled}>{t.nav.WorkforceReadiness}</NavLink>
             
-            <a className={`hover:text-blue-400 ${isScrolled ? 'text-gray-200' : 'text-blue-900'}`}  href={`/${locale}#about`}>
+            <a className={`hover:text-blue-400 ${isScrolled ? 'text-gray-200' : 'text-blue-900'}`}  href={`/${locale}/about`}>
               {t.nav.about}
             </a>
             <a className={`hover:text-blue-400 ${isScrolled ? 'text-gray-200' : 'text-blue-900'}`} href={`/${locale}#services`}>

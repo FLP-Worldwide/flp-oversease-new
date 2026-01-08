@@ -1,4 +1,5 @@
 {
+  "locale": "en",
   "nav": {
     "home": "Home",
     "about": "About & Compliance",
@@ -59,13 +60,13 @@
 
   "industries": {
     "list": [
-      { "title": "Manufacturing & Industrial Production" },
-      { "title": "Logistics, Warehousing & Supply Chain" },
-      { "title": "Construction & Infrastructure" },
-      { "title": "Hospitality & Gastronomy" },
-      { "title": "Cleaning & Facility Management" },
-      { "title": "Technical & Engineering Trades" },
-      { "title": "Healthcare & Nursing" }
+      { "title": "Manufacturing & Industrial Production", "href": "/industries#manufacturing" },
+      { "title": "Logistics, Warehousing & Supply Chain", "href": "/industries#logistics" },
+      { "title": "Construction & Infrastructure", "href": "/industries#construction" },
+      { "title": "Hospitality & Gastronomy", "href": "/industries#hospitality" },
+      { "title": "Cleaning & Facility Management", "href": "/industries#cleaning" },
+      { "title": "Technical & Engineering Trades", "href": "/industries" },
+      { "title": "Healthcare & Nursing", "href": "/industries" }
     ]
   },
 

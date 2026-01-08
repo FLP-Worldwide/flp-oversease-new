@@ -54,9 +54,6 @@ export default function AboutSection({ t }) {
           </ul>
         </div>
       </div>
-
-      {/* FIX OVERLAP WITH NEXT SECTION */}
-      {/* <div className="h-10 lg:h-20 w-full" /> */}
     </section>
   );
 }
