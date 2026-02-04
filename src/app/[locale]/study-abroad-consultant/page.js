@@ -105,12 +105,12 @@ const states = [
         { name: "PFH Private Hochschule", loc: "Göttingen, Germany", count: "10+ Courses", logo: "P" }
     ];
     const stories = [
-        { name: "Kshitij", from: "Delhi", to: "United Kingdom", text: "My FLPOversease coach made studying abroad a breeze. From university shortlisting to visa application, they guided me every step of the way.", tag: "Data Science", partner: "Uni of Birmingham" },
-        { name: "Samad", from: "Gujarat", to: "United Kingdom", text: "Extremely satisfied with FLPOversease for my college application process. Deserves a perfect 5/5 rating!", tag: "Data Science", partner: "Queen Mary Uni" },
-        { name: "Shubham", from: "Telangana", to: "United States", text: "Smooth process, supportive team, highly satisfied with FLPOversease's loan experience. Great service!", tag: "Sciences", partner: "Uni of Illinois" },
-        { name: "Naveenkumar", from: "Karnataka", to: "United States", text: "I applied to 4 universities and I got offers from 2 universities. FLPOversease helped me through entire process to pursue masters.", tag: "Data Science", partner: "Central Michigan" },
-        { name: "Shreya", from: "Noida", to: "Germany", text: "FLPOversease is proactive, detail-oriented, and trustworthy. They made my study abroad dream a breeze. Shoutout to the team for excellence!", tag: "Management", partner: "BSBI Berlin" },
-        { name: "Hanna", from: "Maharashtra", to: "Canada", text: "FLPOversease made it incredibly convenient. Deepa, the consultant, provided excellent guidance. I'm thrilled with the support.", tag: "Data Science", partner: "Humber College" }
+        { name: "Kshitij", from: "Delhi", to: "United Kingdom", text: "My FLPOverseas coach made studying abroad a breeze. From university shortlisting to visa application, they guided me every step of the way.", tag: "Data Science", partner: "Uni of Birmingham" },
+        { name: "Samad", from: "Gujarat", to: "United Kingdom", text: "Extremely satisfied with FLPOverseas for my college application process. Deserves a perfect 5/5 rating!", tag: "Data Science", partner: "Queen Mary Uni" },
+        { name: "Shubham", from: "Telangana", to: "United States", text: "Smooth process, supportive team, highly satisfied with FLPOverseas's loan experience. Great service!", tag: "Sciences", partner: "Uni of Illinois" },
+        { name: "Naveenkumar", from: "Karnataka", to: "United States", text: "I applied to 4 universities and I got offers from 2 universities. FLPOverseas helped me through entire process to pursue masters.", tag: "Data Science", partner: "Central Michigan" },
+        { name: "Shreya", from: "Noida", to: "Germany", text: "FLPOverseas is proactive, detail-oriented, and trustworthy. They made my study abroad dream a breeze. Shoutout to the team for excellence!", tag: "Management", partner: "BSBI Berlin" },
+        { name: "Hanna", from: "Maharashtra", to: "Canada", text: "FLPOverseas made it incredibly convenient. Deepa, the consultant, provided excellent guidance. I'm thrilled with the support.", tag: "Data Science", partner: "Humber College" }
     ];
 
   return (
@@ -366,7 +366,7 @@ const states = [
       <div className="container mx-auto px-4 md:px-12">
         <div className="max-w-2xl mx-auto text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-4">
-            Why Choose <span className="text-[#0046AD]">FLPOversease?</span>
+            Why Choose <span className="text-[#0046AD]">FLPOverseas?</span>
           </h2>
           <p className="text-slate-500 font-medium text-sm">Leading with technology and transparency in global education.</p>
         </div>
@@ -390,7 +390,7 @@ const states = [
       <div className="container mx-auto px-4 md:px-12">
         <div className="max-w-3xl mx-auto text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-black text-slate-900">
-            <span className="text-[#0046AD]">FLPOversease</span> Advantage
+            <span className="text-[#0046AD]">FLPOverseas</span> Advantage
           </h2>
         </div>
         
@@ -513,14 +513,14 @@ const states = [
         <section className="py-20 bg-slate-50 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-12 relative z-10">
         <h2 className="text-2xl md:text-4xl font-black mb-8 tracking-tight text-slate-900">
-          Study Abroad with <span className="text-blue-600">FLPOversease</span>
+          Study Abroad with <span className="text-blue-600">FLPOverseas</span>
         </h2>
         <div className="max-w-4xl space-y-6 text-slate-600 text-base md:text-lg leading-relaxed font-medium">
           <p>
             As per government estimates, a little over <span className="text-slate-900 font-bold">9,00,000 Indians</span> were studying abroad in 2022. This grew to 1.31 million in 2023 and 1.33 million in 2024. Market insights suggest that by 2025, over <span className="text-blue-600 font-bold underline decoration-blue-200 underline-offset-4">2 million Indians</span> will be pursuing global education.
           </p>
           <p>
-            India now holds the position of the second-largest student exporter globally. With total education spending abroad expected to cross <span className="text-slate-900 font-bold">USD 70 billion</span> in 2025, FLPOversease is committed to providing the transparency and expertise required to navigate this landscape.
+            India now holds the position of the second-largest student exporter globally. With total education spending abroad expected to cross <span className="text-slate-900 font-bold">USD 70 billion</span> in 2025, FLPOverseas is committed to providing the transparency and expertise required to navigate this landscape.
           </p>
           <button className="inline-flex items-center space-x-2 text-blue-600 font-bold uppercase text-[10px] tracking-widest hover:text-blue-700 transition-colors group">
             <span>Read detailed report</span>
@@ -567,7 +567,7 @@ const states = [
         </div>
         
         <div className="mt-20 pt-8 border-t border-slate-50 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-          <p>Copyright © 2025 FLPOversease. Registered Consultancy.</p>
+          <p>Copyright © 2025 FLPOverseas. Registered Consultancy.</p>
           <div className="mt-4 md:mt-0 flex items-center space-x-2">
             <span>Powered by</span>
             <span className="text-slate-900">FLP Worldwide</span>
