@@ -76,6 +76,10 @@ export default function AnnouncementBar({ isScrolled,currentLang, t }) {
             <NavLink href={`/${locale}/contact`} isScrolled={isScrolled} className={`hover:underline 
             ${isScrolled ? 'text-slate-900' : 'text-white'}
             `}>{t.nav.faq}</NavLink>
+            <span className="opacity-50">|</span>
+            <NavLink href={`/${locale}/study-abroad-consultant`} isScrolled={isScrolled} className={`hover:underline 
+            ${isScrolled ? 'text-slate-900' : 'text-white'}
+            `}>{t.nav.study_abroad_consultant}</NavLink>
 
 
           <NavLink href={`https://flpworldwide.com`} isScrolled={isScrolled} 

@@ -1,11 +1,16 @@
 {
-    "locale": "de",
+  "locale": "de",
   "nav": {
     "home": "Startseite",
     "about": "Über uns",
     "services": "Dienstleistungen",
     "contact": "Kontakt",
-    "cta": "Termin buchen"
+    "cta": "Termin buchen",
+    "Employers": "Arbeitgeber",
+    "WorkforceReadiness": "Workforce Readiness",
+    "Industries": "Industries",
+    "study_abroad_consultant": "Study Abroad Consultant"
+
   },
 
   "hero": {
