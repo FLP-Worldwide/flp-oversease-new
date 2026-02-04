@@ -138,7 +138,7 @@ const states = [
         <div className="flex items-center space-x-6">
           <div className="hidden md:flex items-center space-x-2 font-semibold text-sm text-slate-600 border border-slate-200 px-5 py-2 rounded-md bg-slate-100">
             <span className="opacity-80 font-normal">Support:</span>
-            <span>+91 81491-33730</span>
+            <span>+91 9119116164</span>
           </div>
           {/* <button className="bg-[#0046AD] text-white px-5 py-2 rounded-md font-bold text-xs hover:bg-[#00368a] transition-all shadow-sm active:scale-95">
             Free Consultation
@@ -540,12 +540,17 @@ const states = [
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center space-y-12 md:space-y-0">
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-[#0046AD] rounded-xl flex items-center justify-center shadow-lg shadow-blue-100">
-                <span className="text-white font-black text-lg">F</span>
-              </div>
-              <span className="text-2xl font-black text-slate-900 tracking-tighter">FLP<span className="text-[#0046AD]">Oversease</span></span>
+              <NavLink href={`/en/`}>
+              <Image
+                src={ '/images/new1.png'}
+                alt="FLP Overseas Logo"
+                width={200}
+                height={40}
+                className="object-contain"
+                priority
+            /></NavLink>
             </div>
-            <p className="text-slate-400 font-bold text-xs uppercase tracking-[0.2em]">A plan for every dream.</p>
+            <p className="text-slate-400 font-bold text-xs uppercase tracking-[0.2em]">A plan for every dream. Study Abroad with FLP Overseas</p>
           </div>
           
           <div className="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-12">
