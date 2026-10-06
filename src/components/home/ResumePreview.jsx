@@ -1,29 +1,28 @@
 "use client";
 
-import React, { useRef } from "react";
-import dynamic from "next/dynamic";
+import React, { useRef, useState } from "react";
 
-const html2pdf = dynamic(() => import("html2pdf.js"), {
-  ssr: false,
-});
-
-
-export default function ResumePreview({ data, onBack, onClose }) {
+export default function ResumePreview({ data, aadhaar, onBack, onClose, saveOnDownload = true }) {
   const pdfRef = useRef(null);
+  const saved = useRef(false);
+  const [downloading, setDownloading] = useState(false);
 
 const downloadPDF = async () => {
-    const html2pdfModule = (await import("html2pdf.js")).default;
-
   try {
-    // 1️⃣ Save resume to DB
-    await fetch("/api/resumes", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    });
+    setDownloading(true);
+    if (saveOnDownload && !saved.current) {
+      const form = new FormData();
+      form.set('mode', 'created');
+      form.set('resume', JSON.stringify(data));
+      if (aadhaar) form.set('aadhaar', aadhaar);
+      const response = await fetch('/api/resumes', { method: 'POST', body: form });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.message || 'Failed to save resume');
+      saved.current = true;
+    }
 
-    // 2️⃣ Generate PDF
-    html2pdfModule()
+    const html2pdfModule = (await import("html2pdf.js")).default;
+    await html2pdfModule()
       .set({
         margin: 10,
         filename: `${data.basics.name || "Resume"}.pdf`,
@@ -41,21 +40,23 @@ const downloadPDF = async () => {
       .save();
   } catch (err) {
     console.error(err);
-    alert("Failed to save resume");
+    alert(err.message || "Failed to download resume");
+  } finally {
+    setDownloading(false);
   }
 };
 
 
   return (
     <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center">
-      <div className="bg-white w-[70vw] h-[90vh] rounded-lg flex flex-col">
+      <div className="bg-white w-[calc(100vw-2rem)] md:w-[70vw] h-[90vh] rounded-lg flex flex-col">
 
         {/* HEADER */}
         <div className="px-5 py-3 border-b flex justify-between text-sm">
           <button onClick={onBack}>← Back</button>
           <div className="flex gap-3">
-            <button onClick={downloadPDF} className="btn-primary">
-              Download PDF
+            <button onClick={downloadPDF} disabled={downloading} className="btn-primary disabled:opacity-50">
+              {downloading ? 'Preparing PDF...' : 'Download PDF'}
             </button>
             <button onClick={onClose}>✕</button>
           </div>

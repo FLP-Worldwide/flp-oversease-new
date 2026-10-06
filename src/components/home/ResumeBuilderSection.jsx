@@ -1,13 +1,22 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ResumeModal from './ResumeModal';
 
 export default function ResumeBuilderSection() {
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    const openFromHash = () => {
+      if (window.location.hash === '#resume') setOpen(true);
+    };
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+    return () => window.removeEventListener('hashchange', openFromHash);
+  }, []);
+
   return (
-    <section className="py-24 bg-[#f8fafc]">
+    <section id="resume" className="py-24 bg-[#f8fafc] scroll-mt-28">
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         {/* Heading */}
@@ -60,7 +69,12 @@ export default function ResumeBuilderSection() {
       </div>
 
       {/* Resume Modal */}
-      {open && <ResumeModal onClose={() => setOpen(false)} />}
+      {open && <ResumeModal onClose={() => {
+        setOpen(false);
+        if (window.location.hash === '#resume') {
+          window.history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+      }} />}
     </section>
   );
 }

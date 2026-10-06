@@ -77,7 +77,15 @@ export default function HeroSection() {
 
     </div>
   </div>
+
 </section>
+
+ <a
+  href="#resume"
+  className="fixed z-40 right-3 md:right-6 top-1/2 -translate-y-1/2 px-5 py-3 rounded-full bg-[#ffde49] text-blue-950 font-semibold shadow-lg hover:bg-yellow-300 transition"
+ >
+  Create Resume
+ </a>
 
 
  <EnquiryModal

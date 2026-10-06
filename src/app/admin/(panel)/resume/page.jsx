@@ -49,6 +49,7 @@ export default function AdminResumes() {
                   <th className="py-2 px-4 text-xs font-medium text-gray-600">
                     View
                   </th>
+                  <th className="py-2 px-4 text-xs font-medium text-gray-600">Documents</th>
                 </tr>
               </thead>
 
@@ -65,12 +66,13 @@ export default function AdminResumes() {
                       {row.phone}
                     </td>
                     <td className="py-2 px-4 text-sm">
-                      <button
-                        onClick={() => setSelectedResume(row.resume)}
-                        className="text-blue-600 hover:underline"
-                      >
-                        View
-                      </button>
+                      {row.resume?.basics && row.resume?.source !== 'uploaded' ? (
+                        <button onClick={() => setSelectedResume(row.resume)} className="text-blue-600 hover:underline">View</button>
+                      ) : <span className="text-gray-500">Uploaded file</span>}
+                    </td>
+                    <td className="py-2 px-4 text-sm space-x-3">
+                      {row.documents?.aadhaar?.name && <a href={`/api/resumes/${row._id}/files/aadhaar`} className="text-blue-600 hover:underline">Aadhaar</a>}
+                      {row.documents?.existingResume?.name && <a href={`/api/resumes/${row._id}/files/existingResume`} className="text-blue-600 hover:underline">Resume</a>}
                     </td>
                   </tr>
                 ))}
@@ -84,6 +86,7 @@ export default function AdminResumes() {
       {selectedResume && (
         <ResumePreview
           data={selectedResume}
+          saveOnDownload={false}
           onBack={() => setSelectedResume(null)}
           onClose={() => setSelectedResume(null)}
         />

@@ -16,6 +16,14 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Resume uploads
+
+Set `MONGODB_URI` before running the app. The resume popup accepts an Aadhaar card (PDF, JPG or PNG) and an optional existing resume (PDF, DOC or DOCX), each up to 5 MB. If no existing resume is selected, the visitor can build one in the popup. Uploaded files are stored in MongoDB and are available from the admin resume list.
+
+For admin file access, set a private `ADMIN_SESSION_SECRET` in production. When it is not set, the server uses `MONGODB_URI` as the session signing key. Existing admin sessions must sign in again after this change.
+
+To initialize a new admin database, set `ADMIN_SEED_TOKEN` and `ADMIN_INITIAL_PASSWORD` (and optionally `ADMIN_INITIAL_EMAIL`), then send an authenticated `POST` request to `/api/admin/seed`. The public default-account seed endpoint is disabled.
+
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

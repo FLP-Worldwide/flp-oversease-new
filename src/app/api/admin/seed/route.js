@@ -2,7 +2,12 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import Admin from "@/models/Admin";
 
-export async function GET() {
+export async function POST(request) {
+  const seedToken = process.env.ADMIN_SEED_TOKEN;
+  const initialPassword = process.env.ADMIN_INITIAL_PASSWORD;
+  if (!seedToken || !initialPassword || request.headers.get('authorization') !== `Bearer ${seedToken}`) {
+    return NextResponse.json({ success: false, message: 'Unauthorized' }, { status: 401 });
+  }
   try {
     await connectDB();
 
@@ -14,23 +19,16 @@ export async function GET() {
       });
     }
 
-    const admins = await Admin.insertMany([
-      {
-        name: "Super Admin",
-        email: "admin@flp.com",
-        password: "admin123",
-      },
-      {
-        name: "Manager",
-        email: "manager@flp.com",
-        password: "manager123",
-      },
-    ]);
+    const admins = await Admin.insertMany([{
+      name: 'Super Admin',
+      email: process.env.ADMIN_INITIAL_EMAIL || 'admin@flp.com',
+      password: initialPassword,
+    }]);
 
     return NextResponse.json({
       success: true,
       message: "Default admins created",
-      admins,
+      admins: admins.map(({ id, name, email }) => ({ id, name, email })),
     });
   } catch (err) {
     return NextResponse.json(

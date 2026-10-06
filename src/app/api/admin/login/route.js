@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import Admin from "@/models/Admin";
+import { createAdminSession } from '@/lib/admin-session';
 
 export async function POST(req) {
   try {
@@ -32,6 +33,13 @@ export async function POST(req) {
         path: "/",
         maxAge: 60 * 60 * 8,
         });
+    res.cookies.set('admin_session', createAdminSession(admin._id.toString()), {
+      httpOnly: true,
+      sameSite: 'lax',
+      secure: process.env.NODE_ENV === 'production',
+      path: '/',
+      maxAge: 60 * 60 * 8,
+    });
 
     return res;
   } catch (err) {

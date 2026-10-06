@@ -11,6 +11,18 @@ const ResumeSchema = new mongoose.Schema(
       type: Object,
       required: true,
     },
+    documents: {
+      aadhaar: {
+        name: String,
+        contentType: String,
+        data: Buffer,
+      },
+      existingResume: {
+        name: String,
+        contentType: String,
+        data: Buffer,
+      },
+    },
   },
   { timestamps: true }
 );
